@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "dgSpecHash": "vYAL+45ITRM=",
+  "success": true,
+  "projectFilePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\gmap.net.core\\2.1.7\\gmap.net.core.2.1.7.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\gmap.net.winpresentation\\2.1.7\\gmap.net.winpresentation.2.1.7.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\naudio\\2.3.0\\naudio.2.3.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\naudio.asio\\2.3.0\\naudio.asio.2.3.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\naudio.core\\2.3.0\\naudio.core.2.3.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\naudio.midi\\2.3.0\\naudio.midi.2.3.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\naudio.wasapi\\2.3.0\\naudio.wasapi.2.3.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\naudio.winforms\\2.3.0\\naudio.winforms.2.3.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\naudio.winmm\\2.3.0\\naudio.winmm.2.3.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\system.data.sqlite\\1.0.115.5\\system.data.sqlite.1.0.115.5.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\system.data.sqlite.ef6\\1.0.115.5\\system.data.sqlite.ef6.1.0.115.5.nupkg.sha512",
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\vosk\\0.3.38\\vosk.0.3.38.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Se detectó una versión del paquete fuera de la restricción de dependencia: System.Data.SQLite 1.0.115.5 requiere System.Data.SQLite.Core (= 1.0.115.5), pero la versión System.Data.SQLite.Core 1.0.119 ya se resolvió.",
+      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "libraryId": "System.Data.SQLite.Core",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "El paquete \"System.Data.SqlClient\" 4.8.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
+      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "El paquete \"System.Data.SqlClient\" 4.8.3 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    }
+  ]
+}

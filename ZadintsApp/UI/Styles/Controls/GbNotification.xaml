@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Estilo para notificación tipo GroupBox -->
+    <Style x:Key="GbNotificationStyle" TargetType="GroupBox">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="1062"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="GroupBox">
+                    <Border x:Name="MainBorder"
+                            CornerRadius="15"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{DynamicResource BackgroundTab2}"
+                            BorderThickness="0.1,0.1,0.1,1">
+                        <ContentPresenter HorizontalAlignment="Stretch"
+                                          VerticalAlignment="Stretch"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MainBorder"
+                                    Property="Effect"
+                                    Value="{DynamicResource ShadowStyle3}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="IconPathStyleRemove" TargetType="Path">
+        <Setter Property="StrokeThickness" Value="1.8"/>
+        <Setter Property="StrokeEndLineCap" Value="Round"/>
+        <Setter Property="StrokeStartLineCap" Value="Round"/>
+        <Setter Property="Fill" Value="Transparent"/>
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="Margin" Value="-8,-7,-6,-6"/>
+        <Setter Property="Stroke">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource SidebarButtonNormal}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

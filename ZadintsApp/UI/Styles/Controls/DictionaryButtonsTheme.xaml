@@ -1,0 +1,220 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!--======================================[ LIGHT COLORS ]====================================-->
+    <!-- Mentolada -->
+    <Color x:Key="Mentolada1">#97C5B7</Color>
+    <Color x:Key="Mentolada2">#CCE3B0</Color>
+    
+    <!-- Cítricos -->
+    <Color x:Key="Citricos1">#E2C388</Color>
+    <Color x:Key="Citricos2">#F6BFA8</Color>
+
+    <!--Nubarron retro-->
+    <Color x:Key="NubarronRetro1">#92A9BD</Color>
+    <Color x:Key="NubarronRetro2">#BABAD7</Color>
+
+    <!--//Cerezo-->
+    <Color x:Key="Cerezo1">#BDD6BB</Color>
+    <Color x:Key="Cerezo2">#F7D7D5</Color>
+   
+    
+    
+
+
+    <!--//Glaciar-->
+    <Color x:Key="Glaciar1">#EFF0F5</Color>
+    <Color x:Key="Glaciar2">#B4B5B8</Color>
+
+    <!--======================================[ DARK COLORS ]====================================//-->
+
+
+    <!--//Pantera-->
+    <Color x:Key="Pantera1">#CCB1FD </Color>
+    <Color x:Key="Pantera2">#F5F6FA</Color>
+    
+    <!--Bosque-->
+    <Color x:Key="Bosque1">#121D12</Color>
+    <Color x:Key="Bosque2">#2D3D2B</Color>
+
+    <!--Limonada-->
+    <Color x:Key="Limonada1">#340820</Color>
+    <Color x:Key="Limonada2">#2E2007</Color>
+
+    <!--//Aurora-->
+    <Color x:Key="Aurora1">#082023</Color>
+    <Color x:Key="Aurora2">#071B2B</Color>
+
+    <!--//crepúsculo-->
+    <Color x:Key="Crepusculo1">#0D0E37</Color>
+    <Color x:Key="Crepusculo2">#080A25</Color>
+
+    <!--//Noche-->
+    <Color x:Key="Noche1">#32343E</Color>
+    <Color x:Key="Noche2">#141420</Color>
+
+
+
+    <!--======================================[ DARK COMPONENTS ]====================================-->
+
+    <LinearGradientBrush x:Key="ThemeButton1" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Mentolada1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Mentolada2}" Offset="0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThemeButton2" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Citricos1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Citricos2}" Offset="0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThemeButton3" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource NubarronRetro1}" Offset="1"/>
+        <GradientStop Color="{StaticResource NubarronRetro2}" Offset="0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThemeButton4" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Cerezo1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Cerezo2}" Offset="0"/>
+    </LinearGradientBrush>
+
+
+    <LinearGradientBrush x:Key="ThemeButton5" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Pantera1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Pantera2}" Offset="0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThemeButton6" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Glaciar1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Glaciar2}" Offset="0"/>
+    </LinearGradientBrush>
+
+
+
+    <LinearGradientBrush x:Key="ThemeButton7" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Bosque1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Bosque2}" Offset="0"/>
+    </LinearGradientBrush>
+
+
+
+    <LinearGradientBrush x:Key="ThemeButton8" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Limonada1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Limonada2}" Offset="0"/>
+    </LinearGradientBrush>
+
+
+
+    <LinearGradientBrush x:Key="ThemeButton9" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Aurora1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Aurora2}" Offset="0"/>
+    </LinearGradientBrush>
+
+
+
+    <LinearGradientBrush x:Key="ThemeButton10" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Crepusculo1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Crepusculo2}" Offset="0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThemeButton11" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="51.71" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="{StaticResource Noche1}" Offset="1"/>
+        <GradientStop Color="{StaticResource Noche2}" Offset="0"/>
+    </LinearGradientBrush>
+
+
+
+    
+
+    
+    
+
+</ResourceDictionary>
