@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
 
-                <ResourceDictionary Source="/UI/Styles/Theme/Nubarron.xaml"/>
+                <ResourceDictionary Source="/UI/Styles/Theme/Glaciar.xaml"/>
                 <ResourceDictionary Source="/UI/Styles/Controls/GbNotification.xaml"/>
                 <ResourceDictionary Source="/UI/Styles/Controls/DictionaryButtonsTheme.xaml"/>
 

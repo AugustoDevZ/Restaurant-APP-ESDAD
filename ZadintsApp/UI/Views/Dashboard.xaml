@@ -60,6 +60,14 @@
 
 
         <Grid RenderTransformOrigin="0.506,0.455" Margin="8,8,3,8" Cursor="Hand">
+
+            
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            
             <!---=================================================[ TAB ]=============================================================-->
 
             <Button x:Name="btnNews" 
@@ -109,12 +117,12 @@
                     </EventTrigger>
                 </Button.Triggers>
             </Button>
+                
 
+            <Grid Margin="1165,18,24,584">
 
-            <Grid Width="45" Height="45" Margin="1172,27,27,582">
-
-                <Ellipse Stroke="{DynamicResource ButtonsHover}" StrokeThickness="2" Margin="-11,-1,10,0"/>
-                <Image x:Name="imgAvatar" Source="{Binding UserImage}" Stretch="Fill" Margin="-23,0,22,-1">
+                <Ellipse Stroke="{DynamicResource ButtonsHover}" StrokeThickness="2"/>
+                <Image x:Name="imgAvatar" Source="{Binding UserImage}" Stretch="Fill" Margin="-10,0,22,-1">
                     <Image.Clip>
                         <EllipseGeometry Center="22.5,22.5" RadiusX="22.5" RadiusY="22.5"/>
                     </Image.Clip>
@@ -134,50 +142,159 @@
                         <GradientStop Color="{DynamicResource DarkBackgroundTab1}" Offset="0"/>
                     </LinearGradientBrush>
                 </Grid.Background>
+                <TextBlock Text="ADMINISTRACIÓN" x:Name="IconHome2_Copiar"
+                            
+                    FontWeight="SemiBold"
+                    FontFamily="Cascadia Mono"
+                    VerticalAlignment="Top"
+                    Margin="10,146,39,0" Height="22">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{DynamicResource SidebarButtonNormal}" />
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock Text="PRODUCCIÓN" x:Name="IconHome2_Copiar1"
+                            
+                    FontWeight="SemiBold"
+                    FontFamily="Cascadia Mono"
+                    VerticalAlignment="Top"
+                    Margin="11,445,38,0" Height="22">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{DynamicResource SidebarButtonNormal}" />
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <StackPanel x:Name="btnSelling" Orientation="Vertical"
+                    Background="Transparent"
+                    VerticalAlignment="Top"
+                    Margin="0,472,48,0">
+
+                    <!-- Capas -->
+
+
+                    <!-- Inicio -->
+
+                    <!-- Estadísticas -->
+                    <Button 
+                        x:Name="btnHistorial1" 
+                        Background="Transparent" 
+                        BorderBrush="Transparent" 
+                        BorderThickness="1"
+                        Cursor="Hand" 
+                        Padding="0" 
+                        Height="45" 
+                        Margin="0,5,0,5" 
+     
+                        Template="{DynamicResource SidebarTemplate}" Click="btnSelling_Click" Width="107">
+
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="IconVentas"
+                                            Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)"
+                                            To="{DynamicResource SidebarButtonHover}" Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetName="IconVentas2"
+                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                            To="{DynamicResource SidebarButtonHover}"
+                                            Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="IconVentas"
+                                            Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)"
+                                            To="{DynamicResource SidebarButtonNormal}" Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetName="IconVentas2"
+                                            Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                            To="{DynamicResource SidebarButtonNormal}"
+                                            Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+
+                        <Grid Height="23" Width="93">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Path x:Name="IconVentas"
+                                Grid.Column="0"
+                                Data="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                StrokeThickness="1.8"
+                                StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                                <Path.Stroke>
+                                    <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
+                                </Path.Stroke>
+                            </Path>
+                            <TextBlock x:Name="IconVentas2"
+                               
+                                FontWeight="SemiBold"
+                                FontSize="15"
+                                FontFamily="Segoe UI"
+                                HorizontalAlignment="Left"
+                                Grid.Column="1"
+                                VerticalAlignment="Center"
+                                Margin="10,0,-93,0" Height="22" Text="Vender">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{DynamicResource SidebarButtonNormal}" />
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </Grid>
+
+                    </Button>
+
+                    <!-- Lista -->
+
+                    <!-- Configuración -->
+
+                </StackPanel>
             </Grid>
             <StackPanel Orientation="Vertical"
                 Background="Transparent"
                 VerticalAlignment="Top"
-                Margin="10,156,1121,0">
+                Margin="10,156,1044,0" Height="267">
 
                 <!-- Inicio -->
-                <Button x:Name="btnTravel"
+                <Button x:Name="btnMain"
                     Background="Transparent"
                     BorderBrush="Transparent"
                     BorderThickness="1"
-                    Cursor="Hand"
+                    Cursor=""
                     Padding="0"
                     Height="45"
                     Margin="0,5,0,5" 
-                    Template="{DynamicResource SidebarTemplate}" Click="btnTravel_Click"
+                    Template="{DynamicResource SidebarTemplate}" Click="btnMain_Click"
                     >
 
 
-                    <Grid RenderTransformOrigin="0.5,0.5" Height="23" Width="93">
+                    <Grid RenderTransformOrigin="0.5,0.5" Height="23" Width="107">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Path x:Name="IconHome"
-                            Data="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"
+                            Data="M10.3094 1.45091C10.8353 1.19138 11.4141 1 12 1C12.5859 1 13.1647 1.19138 13.6906 1.45091C14.2248 1.71454 14.7659 2.07921 15.2935 2.49796C16.3486 3.33531 17.4285 4.45212 18.3932 5.60982C19.3601 6.77001 20.2361 8.0012 20.8766 9.08502C21.1963 9.62614 21.4667 10.1462 21.6602 10.6134C21.8425 11.0535 22 11.5467 22 12V20.0018C22 21.6599 20.6557 23 19 23H16C14.8954 23 14 22.1046 14 21V15H10V21C10 22.1046 9.10457 23 8 23H5C3.34434 23 2 21.6599 2 20.0018V12C2 11.5467 2.15748 11.0535 2.33982 10.6134C2.53334 10.1462 2.80369 9.62614 3.12345 9.08502C3.76389 8.0012 4.63995 6.77001 5.60678 5.60982C6.57152 4.45212 7.65141 3.33531 8.70647 2.49796C9.2341 2.07921 9.77521 1.71454 10.3094 1.45091Z"
                             Grid.Column="0"
                             StrokeThickness="1.8"
                             StrokeEndLineCap="Round"
                             StrokeStartLineCap="Round"
                             Fill="Transparent"
-                            Stretch="Uniform" Grid.ColumnSpan="2" Margin="2,0,-2,0">
+                            Stretch="Uniform" Grid.ColumnSpan="2" Margin="-24,0,25,0">
                             <Path.Stroke>
                                 <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
                             </Path.Stroke>
                         </Path>
 
-                        <TextBlock Text="Rutas" x:Name="IconHome2"
+                        <TextBlock Text="Menú Principal" x:Name="IconHome2"
                             
                             FontWeight="SemiBold"
                             FontSize="15"
                             FontFamily="Segoe UI"
                             Grid.Column="1"
                             VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
                             Margin="22,0,-71,0" Height="22">
                             <TextBlock.Foreground>
                                 <SolidColorBrush Color="{DynamicResource SidebarButtonNormal}" />
@@ -230,30 +347,31 @@
                     Height="45" 
                     Margin="0,5,0,5" 
      
-                    Template="{DynamicResource SidebarTemplate}" Click="btnHistorial_Click" Width="107">
+                    Template="{DynamicResource SidebarTemplate}" Click="btnProducts_Click" Width="184">
 
-                    <Grid Height="23" Width="93">
+                    <Grid Height="23" Width="130">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Path x:Name="IconStats"
                             Grid.Column="0"
-                            Data="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                            StrokeThickness="1.8"
-                            StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                            Data="m21.5,20h-.5v-3c0-5.898-4.666-10.726-10.5-10.988v-1.075c.862-.223,1.5-1.007,1.5-1.937,0-1.103-.897-2-2-2s-2,.897-2,2c0,.93.638,1.714,1.5,1.937v1.075c-5.834.262-10.5,5.09-10.5,10.988v3h-.5c-.276,0-.5.224-.5.5s.224.5.5.5h23c.276,0,.5-.224.5-.5s-.224-.5-.5-.5Z"
+                             StrokeThickness="1.8"
+                            StrokeEndLineCap="Round" StrokeStartLineCap="Round" Cursor="" Margin="0,0,0,1" Stretch="Fill">
                             <Path.Stroke>
                                 <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
                             </Path.Stroke>
                         </Path>
-                        <TextBlock Text="Historial" x:Name="IconStats2"
+                        <TextBlock x:Name="IconStats2"
                                
                                 FontWeight="SemiBold"
                                FontSize="15"
                                FontFamily="Segoe UI"
+                                   HorizontalAlignment="Left"
                        Grid.Column="1"
                        VerticalAlignment="Center"
-                       Margin="10,0,-93,0" Height="22">
+                       Margin="10,0,-93,0" Height="22" Text="Productos">
                             <TextBlock.Foreground>
                                 <SolidColorBrush Color="{DynamicResource SidebarButtonNormal}" />
                             </TextBlock.Foreground>
@@ -291,7 +409,7 @@
 
                 <!-- Lista -->
                 <Button 
-                    x:Name="btnResenas" 
+                    x:Name="btnInventario" 
                     Background="Transparent" 
                     BorderBrush="Transparent" 
                     BorderThickness="1"
@@ -299,23 +417,22 @@
                     Padding="0" 
                     Height="45" 
                     Margin="0,5,0,5"
-                    Template="{DynamicResource SidebarTemplate}" Click="btnResenas_Click">
+                    Template="{DynamicResource SidebarTemplate}" Click="btnInventory_Click">
 
-                    <Grid Height="23" Width="93">
+                    <Grid Height="28" Width="134">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Path x:Name="IconList"
                               Grid.Column="0"
-                            Data="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                            StrokeThickness="1.8"
+                            Data="m10.5 22.5c0 .276-.224.5-.5.5-4.025 0-7.38-.974-7.521-1.016-.147-.043-.267-.152-.323-.296-.047-.119-1.155-2.989-1.155-8.688s1.108-8.569 1.155-8.688c.058-.145.179-.255.329-.297.062-.018 1.49-.417 3.799-.692.426-1.582 1.617-2.322 3.717-2.322s3.291.74 3.718 2.322c2.308.275 3.735.674 3.798.692.15.042.271.152.329.297.033.084.823 2.121 1.078 6.157.018.276-.192.513-.468.531-.302.013-.513-.193-.53-.467-.196-3.106-.727-4.992-.93-5.62-.53-.131-1.877-.433-3.741-.636-.219-.024-.397-.189-.438-.406-.206-1.122-.765-1.87-2.816-1.87s-2.609.747-2.815 1.869c-.04.217-.218.383-.438.407-1.865.204-3.212.505-3.742.636-.252.779-1.005 3.495-1.005 8.088 0 4.62.755 7.322 1.006 8.092.838.22 3.722.908 6.994.908.276 0 .5.224.5.5zm12.5-4.5c0 2.294-.552 4.235-.575 4.317-.055.19-.218.331-.415.357-.102.013-2.5.325-4.51.325s-4.408-.312-4.51-.325c-.197-.026-.36-.167-.415-.357-.023-.082-.575-2.023-.575-4.317s.552-4.235.575-4.317c.055-.19.218-.331.415-.357.102-.013 2.5-.325 4.51-.325s4.408.312 4.51.325c.197.026.36.167.415.357.023.082.575 2.023.575 4.317zm-1 0c0-1.628-.305-3.1-.455-3.724-.731-.086-2.53-.276-4.045-.276s-3.313.19-4.045.276c-.15.624-.455 2.096-.455 3.724s.305 3.1.455 3.724c.731.086 2.53.276 4.045.276s3.313-.19 4.045-.276c.15-.624.455-2.096.455-3.724zm-3.5-2h-2c-.276 0-.5.224-.5.5s.224.5.5.5h2c.276 0 .5-.224.5-.5s-.224-.5-.5-.5zm-8.514-8.883c-.211-.177-.526-.149-.705.062-.829.991-1.764 1.895-2.781 2.691-.542-.424-1.062-.88-1.549-1.358-.198-.194-.515-.19-.707.007-.194.197-.19.514.006.707.608.597 1.265 1.16 1.95 1.674.089.067.194.1.3.1s.211-.033.3-.1c1.195-.896 2.288-1.932 3.249-3.079.177-.211.149-.527-.062-.704zm-.705 5.062c-.829.991-1.764 1.895-2.781 2.691-.541-.424-1.062-.88-1.55-1.358-.196-.191-.513-.19-.707.008-.193.197-.189.514.008.707.608.597 1.265 1.159 1.949 1.674.089.066.194.1.3.1s.211-.033.3-.1c1.195-.896 2.288-1.933 3.249-3.08.177-.211.149-.527-.062-.704s-.526-.149-.705.062zm5.719-2.679c0-.276-.224-.5-.5-.5h-3c-.276 0-.5.224-.5.5s.224.5.5.5h3c.276 0 .5-.224.5-.5z"
                             StrokeEndLineCap="Round" StrokeStartLineCap="Round">
                             <Path.Stroke>
                                 <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
                             </Path.Stroke>
                         </Path>
-                        <TextBlock Text="Reseñas" x:Name="IconList2"
+                        <TextBlock Text="Inventario" x:Name="IconList2"
                                    
                                     FontWeight="SemiBold"
                                    FontSize="15"
@@ -373,7 +490,7 @@
                     Margin="0,5,0,5" 
                     Template="{DynamicResource SidebarTemplate}" Click="btnSettings_Click">
 
-                    <Grid Height="19" Width="93">
+                    <Grid Height="19" Width="136">
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -435,6 +552,72 @@
                         </EventTrigger>
                     </Button.Triggers>
                 </Button>
+                <Button 
+                    x:Name="btnDatabase" 
+                    Background="Transparent" 
+                    BorderBrush="Transparent" 
+                    BorderThickness="1"
+                    Cursor="Hand" 
+                    
+                    Padding="0" 
+                    Height="45"
+                    Template="{DynamicResource SidebarTemplate}" Click="btnDatabase_Click">
+
+                    <Grid Height="27" Width="139">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Path x:Name="IconDatabase"
+                            Grid.Column="0"
+                            Data="M12,10c-2.991,0-5,1.005-5,2.5v9.593c0,.949,1.546,1.907,5,1.907s5-.958,5-1.907V12.5c0-1.495-2.009-2.5-5-2.5Zm-4,4.076c.873,.577,2.263,.924,4,.924s3.127-.347,4-.924v1.997c-.088,.25-1.192,.928-4,.928s-3.92-.682-4-.907v-2.017Zm0,3.216c.806,.416,2.107,.708,4,.708s3.195-.293,4.001-.709v1.78c-.085,.249-1.189,.929-4.001,.929s-3.92-.682-4-.907v-1.802Zm4,5.708c-2.817,0-3.92-.682-4-.907v-1.802c.806,.416,2.107,.708,4,.708s3.196-.293,4.002-.71v1.779c-.082,.248-1.185,.93-4.002,.93Zm0-9c-2.504,0-4-.763-4-1.5s1.496-1.5,4-1.5,4,.763,4,1.5-1.496,1.5-4,1.5Zm12-2c0,3.165-2.112,5.842-5,6.705v-1.055c2.327-.826,4-3.043,4-5.65,0-2.958-2.204-5.51-5.126-5.937l-.287-.042-.106-.27c-1.137-2.887-3.877-4.752-6.98-4.752-4.136,0-7.5,3.364-7.5,7.5,0,.635,.079,1.265,.236,1.874l.098,.38-.347,.185c-1.226,.655-1.987,1.923-1.987,3.311,0,2.068,1.682,3.75,3.75,3.75h.25v1h-.25c-2.619,0-4.75-2.131-4.75-4.75,0-1.627,.827-3.125,2.181-3.996-.12-.574-.181-1.163-.181-1.754C2,3.813,5.813,0,10.5,0c3.421,0,6.453,2,7.802,5.122,3.269,.617,5.698,3.523,5.698,6.878Z"
+                            StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                            <Path.Stroke>
+                                <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
+                            </Path.Stroke>
+                        </Path>
+                        <TextBlock Text="Database" x:Name="IconDatabase2"
+                                   
+                            FontWeight="SemiBold"
+                            FontSize="15"
+                            FontFamily="Segoe UI"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Margin="10,0,-93,0" Height="22">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{DynamicResource SidebarButtonNormal}" />
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </Grid>
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="IconDatabase"
+                        Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
+                        To="{DynamicResource SidebarButtonHover}" Duration="0:0:0.2"/>
+                                    <ColorAnimation Storyboard.TargetName="IconDatabase2"
+Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+To="{DynamicResource SidebarButtonHover}"
+Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="IconDatabase"
+                        Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
+                        To="{DynamicResource SidebarButtonNormal}" Duration="0:0:0.2"/>
+                                    <ColorAnimation Storyboard.TargetName="IconDatabase2"
+Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+To="{DynamicResource SidebarButtonNormal}"
+Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
 
             </StackPanel>
 
@@ -490,17 +673,6 @@
             </Button>
 
             <!---=================================================[ Title Content ]=============================================================-->
-            <Label 
-                x:Name="lblTitleGlobal" 
-                Content="¿A donde quieres ir?" 
-                HorizontalAlignment="Left" 
-                Margin="215,81,0,0" 
-                VerticalAlignment="Top" 
-                AutomationProperties.Name="" 
-                AutomationProperties.HelpText="" 
-                Foreground="{DynamicResource FontColor}" 
-                FontSize="25" 
-                FontWeight="Bold"/>
             <Border 
                 Margin="24,25,1164,580"
                 CornerRadius="12"
@@ -528,453 +700,9 @@
                 HorizontalAlignment="Left" Margin="588,642,0,-2" Cursor=""/>
 
 
-
-            <TabControl x:Name="tabApp"
-                HorizontalAlignment="Left" 
-                Height="515" 
-                Margin="187,113,0,0" 
-                VerticalAlignment="Top" 
-                Width="1019"
-                Background="Transparent"
-                BorderThickness="0"
-                >
-                
-                
-                <TabControl.Template>
-                    <ControlTemplate TargetType="TabControl">
-                        <ContentPresenter ContentSource="SelectedContent"/>
-                    </ControlTemplate>
-                </TabControl.Template>
-                
-                <TabItem Header="tab 0">
-                    <Grid >
-                        <Button x:Name="btnBuscar" 
-                            Content="Oscuro" 
-                            HorizontalAlignment="Left" 
-                            Height="30" 
-                            Margin="379,28,0,0"
-                            Foreground="{DynamicResource FontColor}"
-                            FontSize="14.5"
-                            FontWeight="SemiBold"
-                            VerticalAlignment="Top" 
-                            Width="113" Click="btnTeme_Click">
-
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-
-                                    <Border x:Name="bd"
-                                        Background="{DynamicResource BackgroundContentHover}"
-                                        CornerRadius="6"
-                                         Effect="{DynamicResource ShadowStyle2}">
-
-                                        <ContentPresenter HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"/>
-                                    </Border>
-
-                                    <ControlTemplate.Triggers>
-
-                                        <!-- Hover -->
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="bd"
-                                            Property="Background"
-                                            Value="{DynamicResource Background2}"/>
-                                        </Trigger>
-
-                                    </ControlTemplate.Triggers>
-
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button x:Name="btnAudioBuscar" 
-                            HorizontalAlignment="Left" 
-                            Height="48" 
-                            Margin="41,19,0,0"
-                            VerticalAlignment="Top" 
-                            Width="51" Click="btnAudioBuscar_Click">
-
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-
-                                    <Border x:Name="bd"
-                                        Background="{DynamicResource BackgroundContentHover}"
-                                        CornerRadius="6"
-                                        Effect="{DynamicResource ShadowStyle2}">
-
-                                        <ContentPresenter HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"/>
-                                    </Border>
-
-
-
-                                </ControlTemplate>
-                            </Button.Template>
-                            <Grid RenderTransformOrigin="0.5,0.5" Height="23" Width="23">
-                                <Path 
-                x:Name="IconAudio"
-                    Data="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" 
-                     
-                    StrokeThickness="1.8" 
-                    StrokeEndLineCap="Round" 
-                    StrokeStartLineCap="Round">
-                                    <Path.Stroke>
-                                        <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
-                                    </Path.Stroke>
-                                </Path>
-                            </Grid>
-
-                            <Button.Triggers>
-                                <EventTrigger RoutedEvent="MouseEnter">
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="IconAudio"
-        Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
-        To="{DynamicResource SidebarButtonHover}" Duration="0:0:0.2"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                                <EventTrigger RoutedEvent="MouseLeave">
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="IconAudio"
-        Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
-        To="{DynamicResource SidebarButtonNormal}" Duration="0:0:0.2"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                            </Button.Triggers>
-                        </Button>
-                        <Border
-                            CornerRadius="10"
-                            BorderThickness="3"
-                            Background="{DynamicResource BackgroundContent1}" Effect="{DynamicResource ShadowStyle2}" Margin="97,24,718,427"
-                            Padding="0">
-                            <TextBox x:Name="txtBuscador" 
-                                HorizontalAlignment="Left" 
-                                Height="19" 
-                                Margin="7,0,0,0" 
-                                TextWrapping="Wrap" 
-                                Background="Transparent"
-                                BorderBrush="Transparent"
-                                Text="TextBox" 
-                                VerticalAlignment="Center" 
-                                Width="269">
-
-                            </TextBox>
-                        </Border>
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="29*"/>
-                                <ColumnDefinition Width="37*"/>
-                                <ColumnDefinition Width="480*"/>
-                            </Grid.ColumnDefinitions>
-                            <gmap:GMapControl x:Name="Mapa" Margin="27,92,10,10" Grid.ColumnSpan="3"/>
-                        </Grid>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="tab 1">
-                    <Grid >
-                        <Button Content="Button" HorizontalAlignment="Left" Margin="59,60,0,0" VerticalAlignment="Top" Height="36" Width="119" Click="btn_Click"/>
-
-                    </Grid>
-                </TabItem>
-
-                <TabItem Header="tab 2">
-                    <Grid >
-                        <Button Content="Button" HorizontalAlignment="Left" Margin="59,60,0,0" VerticalAlignment="Top" Height="36" Width="119" Click="btn_Click"/>
-                        <Label x:Name="lblTituloTab2" Content="Label" HorizontalAlignment="Left" Height="50" Margin="59,28,0,0" VerticalAlignment="Top" Width="200">
-                            <Label.Foreground>
-                                <SolidColorBrush Color="{DynamicResource FontColors}"/>
-                            </Label.Foreground>
-                        </Label>
-                        <GroupBox 
-                            x:Name="gbxSettingTeme_Copiar2" 
-                            Header="" 
-                            BorderThickness="0"
-                            Margin="59,167,513,245"
-                            Background="Transparent"
-                            Padding="0"
-                            UseLayoutRounding="False" 
-                            AutomationProperties.Name="gbxHotbar">
-
-                            <GroupBox.Template>
-                                <ControlTemplate TargetType="{x:Type GroupBox}">
-                                    <Border CornerRadius="15"
-                                        BorderBrush="Transparent"
-                                        BorderThickness="2"
-                                        SnapsToDevicePixels="True"
-                                        Background="{DynamicResource BackgroundContent1}"
-                                        Effect="{DynamicResource ShadowStyle2}"/>
-                                </ControlTemplate>
-                            </GroupBox.Template>
-
-                        </GroupBox>
-
-                    </Grid>
-                </TabItem>
-
-                <TabItem Header="tab 3" Height="20" VerticalAlignment="Top">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="18*"/>
-                            <RowDefinition Height="145*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="4*"/>
-                            <ColumnDefinition Width="5*"/>
-                            <ColumnDefinition Width="10*"/>
-                            <ColumnDefinition Width="12*"/>
-                            <ColumnDefinition Width="333*"/>
-                        </Grid.ColumnDefinitions>
-                        <GroupBox 
-                            x:Name="gbxSettingTeme" 
-                            Header="" 
-                            BorderThickness="0"
-                            Margin="1,30,485,382"
-                            Background="Transparent"
-                            Padding="0"
-                            UseLayoutRounding="False" 
-                            AutomationProperties.Name="gbxHotbar" Grid.ColumnSpan="3" Grid.Column="2" Grid.RowSpan="2">
-
-                            <GroupBox.Template>
-                                <ControlTemplate TargetType="{x:Type GroupBox}">
-                                    <Border CornerRadius="15"
-                                        BorderBrush="Transparent"
-                                        BorderThickness="2"
-                                        SnapsToDevicePixels="True"
-                                        Background="{DynamicResource BackgroundContent1}"
-                                        Effect="{DynamicResource ShadowStyle2}"/>
-                                </ControlTemplate>
-                            </GroupBox.Template>
-
-                        </GroupBox>
-                        <Label 
-                            x:Name="lblTemeSetting" 
-                            Content="Modo de color" 
-                            HorizontalAlignment="Left" 
-                            Margin="12,39,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Bold" 
-                            Height="30" 
-                            Width="408" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.RowSpan="2"/>
-                        <Label 
-                            x:Name="lblTemeSettingLore" 
-                            Content="Cambia el tema oscuro o claro de la aplicación." 
-                            HorizontalAlignment="Left" 
-                            Margin="12,10,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Light" 
-                            Height="30" 
-                            Width="678" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1"/>
-
-                        <Button x:Name="btnTeme" 
-                            Content="Cambiar Tema" 
-                            HorizontalAlignment="Left" 
-                            Height="29" 
-                            Margin="308,0,0,0"
-                            Foreground="{DynamicResource FontColor}"
-                            FontSize="14.5"
-                            FontWeight="SemiBold"
-                            VerticalAlignment="Top" 
-                            Width="114" Click="btnTeme_Click" Grid.Column="4" Grid.Row="1">
-
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-
-                                    <Border x:Name="bd"
-                    Background="{DynamicResource BackgroundContentHover}"
-                    CornerRadius="6">
-
-                                        <ContentPresenter HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"/>
-                                    </Border>
-
-                                    <ControlTemplate.Triggers>
-
-                                        <!-- Hover -->
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="bd"
-                            Property="Background"
-                            Value="{DynamicResource BackgroundButtonHover}"/>
-                                        </Trigger>
-
-                                    </ControlTemplate.Triggers>
-
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                        <Label 
-                            x:Name="lblTemeSetting_Copiar" 
-                            Content="Modo de color" 
-                            HorizontalAlignment="Left" 
-                            Margin="12,39,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Bold" 
-                            Height="30" 
-                            Width="408" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.RowSpan="2"/>
-
-
-                        <!--Settin 2-->
-                        <GroupBox 
-                            x:Name="gbxSettingTeme_Copiar" 
-                            Header="" 
-                            BorderThickness="0"
-                            Margin="1,75,485,283"
-                            Background="Transparent"
-                            Padding="0"
-                            UseLayoutRounding="False" 
-                            AutomationProperties.Name="gbxHotbar" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1">
-
-                            <GroupBox.Template>
-                                <ControlTemplate TargetType="{x:Type GroupBox}">
-                                    <Border CornerRadius="15"
-                                        BorderBrush="Transparent"
-                                        BorderThickness="2"
-                                        SnapsToDevicePixels="True"
-                                        Background="{DynamicResource BackgroundContent1}"
-                                        Effect="{DynamicResource ShadowStyle2}"/>
-                                </ControlTemplate>
-                            </GroupBox.Template>
-
-                        </GroupBox>
-                        <Label 
-                            x:Name="lblLanguageSettingLore" 
-                            Content="Cambia el idioma general de la aplicación." 
-                            HorizontalAlignment="Left" 
-                            Margin="12,109,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Light" 
-                            Height="30" 
-                            Width="678" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1"/>
-                        <Label 
-                            x:Name="lblLanguageSetting" 
-                            Content="Cambiar Idioma" 
-                            HorizontalAlignment="Left" 
-                            Margin="12,84,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Bold" 
-                            Height="30" 
-                            Width="408" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1"/>
-                        <GroupBox 
-                            x:Name="gbxSettingTeme_Copiar1" 
-                            Header="" 
-                            BorderThickness="0"
-                            Margin="1,167,485,10"
-                            Background="Transparent"
-                            Padding="0"
-                            UseLayoutRounding="False" 
-                            AutomationProperties.Name="gbxHotbar" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1">
-
-                            <GroupBox.Template>
-                                <ControlTemplate TargetType="{x:Type GroupBox}">
-                                    <Border CornerRadius="15"
-                                        BorderBrush="Transparent"
-                                        BorderThickness="2"
-                                        SnapsToDevicePixels="True"
-                                        Background="{DynamicResource BackgroundContent1}"
-                                        Effect="{DynamicResource ShadowStyle2}"/>
-                                </ControlTemplate>
-                            </GroupBox.Template>
-
-                        </GroupBox>
-                        <Label 
-                            x:Name="lblUpdatesSetting" 
-                            Content="Recibe una notificacion cuando esté una nueva version&#xD;&#xA;disponible para ti." 
-                            HorizontalAlignment="Left" 
-                            Margin="12,225,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Light" 
-                            Height="47" 
-                            Width="357" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1"/>
-                        <Label 
-                            x:Name="lblNotificacionesSetting" 
-                            Content="Configura tus notificaciones" 
-                            HorizontalAlignment="Left" 
-                            Margin="12,176,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Bold" 
-                            Height="30" 
-                            Width="408" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1"/>
-                        <Label 
-                            x:Name="lblUpdatesSetting_Copiar" 
-                            Content="Recibe una notificaciones de  &#xA;disponible para ti." 
-                            HorizontalAlignment="Left" 
-                            Margin="12,286,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Light" 
-                            Height="47" 
-                            Width="357" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1"/>
-                        <Label 
-                            x:Name="lblUpdatesSetting_Copiar1" 
-                            Content="Recibe una notificaciones de  &#xA;disponible para ti." 
-                            HorizontalAlignment="Left" 
-                            Margin="12,355,0,0" 
-                            VerticalAlignment="Top" 
-                            AutomationProperties.Name="" 
-                            AutomationProperties.HelpText="" 
-                            Foreground="{DynamicResource FontColor}" 
-                            FontSize="15" 
-                            FontWeight="Light" 
-                            Height="47" 
-                            Width="357" 
-                            IsEnabled="False" HorizontalContentAlignment="Left" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1"/>
-
-                    </Grid>
-                </TabItem>
-
-                <TabItem Header="tab 4">
-                    <Grid>
-                        <WrapPanel x:Name="wrpNews" HorizontalAlignment="Left" Height="469" VerticalAlignment="Top" Width="1072" Margin="20,0,0,0">
-
-                        </WrapPanel>
-
-                    </Grid>
-                </TabItem>
-            </TabControl>
             <Label 
                 x:Name="lblTitleGlobal_Copiar" 
-                Content="RUTE" 
+                Content="APP" 
                 HorizontalAlignment="Left" 
                 Margin="80,31,0,0" 
                 VerticalAlignment="Top" 
@@ -984,6 +712,11 @@
                 FontSize="25" 
                 FontWeight="Bold"/>
 
+
+
+            <Frame x:Name="frContent"  NavigationUIVisibility="Hidden" Content="Frame" Margin="205,75,10,17" Navigated="Frame_Content"/>
+            <Frame x:Name="frBody"  NavigationUIVisibility="Hidden" Content="Frame" Navigated="Frame_Content" Margin="-8,-8,-3,-8"
+/>
         </Grid>
     </Border>
 </Window>

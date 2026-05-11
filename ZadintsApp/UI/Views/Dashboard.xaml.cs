@@ -1,24 +1,10 @@
-﻿using GMap.NET;
-using GMap.NET.MapProviders;
-using Zrutas.Utils.NodoManager;
-using System;
-using System.Collections.Generic;
-using System.Security.RightsManagement;
-using System.Text;
+﻿
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using ZadintsApp.Domain.DataStructures;
-using ZadintsApp.Utils.DataManager;
-using Zrutas.Config;
-using Zrutas.Domain.Entities.enumerated;
 using Zrutas.UI.Views;
+using Zrutas.UI.Views.Content;
+using Zrutas.UI.Views.Body;
 using Zrutas.Utils.DataStructures;
+using Zrutas.UI.Views.Frames;
 
 namespace ZadintsApp.UI.Views
 {
@@ -31,13 +17,13 @@ namespace ZadintsApp.UI.Views
         public Dashboard()
         {
             InitializeComponent();
-            btnTeme.Content = AppSetting.CurrentTheme.ToString();
-            ConfigurarMapa();
+            
+            frBody.Visibility = Visibility.Collapsed;
         }
 
         //Source="{Binding UserImage}"
         //=============================[ Otras Opciones ] =============================
-
+        /*
 
         private void ConfigurarMapa()
         {
@@ -52,14 +38,9 @@ namespace ZadintsApp.UI.Views
         }
 
 
-        private void btnTeme_Click(object sender, RoutedEventArgs e)
-        {
-            ThemeWindow themeSelector = new ThemeWindow();
-            themeSelector.ShowDialog();
-
-        }
 
 
+        
         public void UpdateNews()
         {
             for (int i = 0; i < 2; i++)
@@ -126,98 +107,73 @@ namespace ZadintsApp.UI.Views
                 notification.Content = contentGrid;
 
  
-                wrpNews.Children.Add(notification);
+                wrpDatabase.Children.Add(notification);
             }
         }
+        */
+
+
+        
         // ================================================================
-        // ======================= Sidebar Buttons==========================
+        // ======================= Sidebar Buttons Content==========================
         // =================================================================
-        private void btnTravel_Click(object sender, RoutedEventArgs e)
+        private void btnMain_Click(object sender, RoutedEventArgs e)
         {
-            lblTitleGlobal.Content = "¿A dónde quieres ir?";
-            tabApp.SelectedIndex = 0;
+            frContent.Navigate(new Main());
         }
 
-        private void btnHistorial_Click(object sender, RoutedEventArgs e)
+        private void btnProducts_Click(object sender, RoutedEventArgs e)
         {
-            lblTitleGlobal.Content = "Historial";
-            tabApp.SelectedIndex = 1;
+            
         }
-        private void btnResenas_Click(object sender, RoutedEventArgs e)
+        private void btnInventory_Click(object sender, RoutedEventArgs e)
         {
-            lblTitleGlobal.Content = "Reseñas";
-            tabApp.SelectedIndex = 2;
+            frContent.Navigate(new Inventory());
 
         }
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            lblTitleGlobal.Content = "Configuración";
-            tabApp.SelectedIndex = 3;
+            frContent.Navigate(new Setting());
         }
 
+        
+
+        private void btnDatabase_Click(object sender, RoutedEventArgs e)
+        {
+            frContent.Navigate(new Database());
+        }
+
+        private void btnSelling_Click(object sender, RoutedEventArgs e)
+        {
+            frContent.Navigate(new Selling());
+        }
         private void btnCloseApp_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+
+
+        // ================================================================
+        // ======================= Oterns options Body ==========================
+        // =================================================================
+
+        private void btnNews_Click(object sender, RoutedEventArgs e)
+        {
+            frContent.Navigate(new News());
+        }
+        
+
         /*------------------------------------
          * Método del botón Anuncios , se encarga de mostrar las notificaciones a travez del tab 4 al usuario, 
          * se llama cada vez que el usuario hace click en el botón de novedades
          ------------------------------------*/
-        private void btnNews_Click(object sender, RoutedEventArgs e)
-        {
-            lblTitleGlobal.Content = "Notificaciones";
-            tabApp.SelectedIndex = 4;
-            UpdateNews();
-        }
-
-
-        // ================================================================
-        // ======================= Tab 1 Content ==========================
-        // =================================================================
-        private void btnAudioBuscar_Click(object sender, RoutedEventArgs e)
-        {
-            if (!isRecording)
-            {
-                AudioManager objet = new AudioManager(this);
-                objet.StartRecording();  
-            }
-            else
-            {
-
-                AudioManager objet = new AudioManager(this);
-                objet.StopRecording();                
-            }
-
-            isRecording = !isRecording;
-        }
-        private void btnLanguageSetting_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnUpdatesApp_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnNewsSetting_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnStatsSetting_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         
 
-        
+
+        private void Frame_Content(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
     }
 }

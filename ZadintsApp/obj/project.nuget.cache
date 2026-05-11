@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vYAL+45ITRM=",
+  "dgSpecHash": "8PFuBLrg9+8=",
   "success": true,
-  "projectFilePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+  "projectFilePath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\gmap.net.core\\2.1.7\\gmap.net.core.2.1.7.nupkg.sha512",
@@ -32,9 +32,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Se detectó una versión del paquete fuera de la restricción de dependencia: System.Data.SQLite 1.0.115.5 requiere System.Data.SQLite.Core (= 1.0.115.5), pero la versión System.Data.SQLite.Core 1.0.119 ya se resolvió.",
-      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
       "libraryId": "System.Data.SQLite.Core",
       "targetGraphs": [
         "net10.0-windows7.0"
@@ -44,9 +44,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "El paquete \"System.Data.SqlClient\" 4.8.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
-      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
       "libraryId": "System.Data.SqlClient",
       "targetGraphs": [
         "net10.0-windows7.0"
@@ -56,9 +56,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "El paquete \"System.Data.SqlClient\" 4.8.3 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "filePath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
       "libraryId": "System.Data.SqlClient",
       "targetGraphs": [
         "net10.0-windows7.0"

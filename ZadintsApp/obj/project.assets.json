@@ -945,11 +945,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
-      "projectName": "Zrutas",
-      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\Zrutas.csproj",
+      "projectUniqueName": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
+      "projectName": "App",
+      "projectPath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\App.csproj",
       "packagesPath": "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\",
-      "outputPath": "D:\\proyectos\\App Escritorio WPF C#\\UPN2\\ZadintsApp\\ZadintsApp\\obj\\",
+      "outputPath": "D:\\proyectos\\App Escritorio WPF C#\\BAckup\\UI-Model_1\\ZadintsApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

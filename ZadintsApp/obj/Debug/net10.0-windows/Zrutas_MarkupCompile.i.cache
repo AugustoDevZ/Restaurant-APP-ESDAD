@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\proyectos\App Escritorio WPF C#\UPN2\ZadintsApp\ZadintsApp\obj\Debug\net10.0-windows\
+D:\proyectos\App Escritorio WPF C#\BAckup\UI-Model_1\ZadintsApp\obj\Debug\net10.0-windows\
 Zrutas
 none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-D:\proyectos\App Escritorio WPF C#\UPN2\ZadintsApp\ZadintsApp\App.xaml
-102015648295
+D:\proyectos\App Escritorio WPF C#\BAckup\UI-Model_1\ZadintsApp\App.xaml
+17-2130181105
 14982315184
-17-569813923
+23-1692251685
 229-164762402
-UI\Styles\Controls\DictionaryButtonsTheme.xaml;UI\Styles\Controls\GbNotification.xaml;UI\Styles\Theme\Citrico.xaml;UI\Styles\Theme\Glaciar.xaml;UI\Styles\Theme\Mentolada.xaml;UI\Styles\Theme\Noche.xaml;UI\Styles\Theme\Nubarron.xaml;UI\Styles\Theme\Pantera.xaml;UI\Views\Dashboard.xaml;UI\Views\ThemeWhindows.xaml;
+UI\Styles\Controls\DictionaryButtonsTheme.xaml;UI\Styles\Controls\GbNotification.xaml;UI\Styles\Theme\Citrico.xaml;UI\Styles\Theme\Glaciar.xaml;UI\Styles\Theme\Mentolada.xaml;UI\Styles\Theme\Noche.xaml;UI\Styles\Theme\Nubarron.xaml;UI\Styles\Theme\Pantera.xaml;UI\Views\Body\News.xaml;UI\Views\Body\ThemeSelector.xaml;UI\Views\Content\Database.xaml;UI\Views\Content\Inventory.xaml;UI\Views\Content\Main.xaml;UI\Views\Content\Products.xaml;UI\Views\Content\Selling.xaml;UI\Views\Content\Setting.xaml;UI\Views\Dashboard.xaml;
 
-False
+True
 

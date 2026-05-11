@@ -96,7 +96,7 @@
             </TransformGroup>
         </LinearGradientBrush.RelativeTransform>
         <GradientStop Color="#DDE2EB" Offset="1"/>
-        <GradientStop Color="{StaticResource Glaciar2}" Offset="0"/>
+        <GradientStop Color="{DynamicResource Glaciar2}" Offset="0"/>
     </LinearGradientBrush>
 
 
