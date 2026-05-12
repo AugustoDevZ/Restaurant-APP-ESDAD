@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using App.Config;
+using App.Services.ListGeneral;
+using System;
+using App.Domain.Entities;
 using System.Data.SQLite;
 using System.Text;
-using App.Config;
+using App.Domain.DataStructures.Nodo;
 
 namespace App.Services.Database
 {
     internal class DbManagerSet
     {
+
         public static void DatabaseSetTeme(string name)
         {
             using (var conn = new SQLiteConnection(AppSetting.connectionString))
@@ -20,6 +23,31 @@ namespace App.Services.Database
                 {
                     cmd.Parameters.AddWithValue("@teme", name);
                     cmd.Parameters.AddWithValue("@ID", 1);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static void DatabaseSet(string command, ListaSimple<ModelSqlParameter> list)
+        {
+            using (var conn = new SQLiteConnection(AppSetting.connectionString))
+            {
+                conn.Open();
+
+                using (var cmd = new SQLiteCommand(command, conn))
+                {
+                    NodoSimple<ModelSqlParameter> current = list.Head;
+
+                    while (current != null)
+                    {
+                        cmd.Parameters.AddWithValue(
+                            current.Content.Name,
+                            current.Content.Value
+                        );
+
+                        current = current.Pointer;
+                    }
+
                     cmd.ExecuteNonQuery();
                 }
             }

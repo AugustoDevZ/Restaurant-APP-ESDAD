@@ -1,0 +1,313 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\services\\theme\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\services\\theme\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\services\\database\\dbmanagerget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\services\\database\\dbmanagerget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\services\\database\\dbmanagerset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\services\\database\\dbmanagerset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\services\\listgeneral\\listasimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\services\\listgeneral\\listasimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\services\\news\\newsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\services\\news\\newsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\services\\roles\\rolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\services\\roles\\rolesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\domain\\entities\\modelroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\domain\\entities\\modelroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\domain\\entities\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\domain\\entities\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\domain\\entities\\modelsqlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\domain\\entities\\modelsqlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\domain\\nodo\\nodocirculardoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\domain\\nodo\\nodocirculardoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\domain\\nodo\\nodosimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\domain\\nodo\\nodosimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\domain\\entities\\modelnews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\domain\\entities\\modelnews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\components\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\components\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|d:\\proyectos\\app escritorio wpf c#\\restaurant-app\\zadintsapp\\components\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186250C2-AED1-C574-5E83-39D104F20D04}|ZadintsApp\\App.csproj|solutionrelative:zadintsapp\\components\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListaSimple.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\ListGeneral\\ListaSimple.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Services\\ListGeneral\\ListaSimple.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\ListGeneral\\ListaSimple.cs",
+              "RelativeToolTip": "ZadintsApp\\Services\\ListGeneral\\ListaSimple.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T22:35:04.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NewsManager.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\News\\NewsManager.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Services\\News\\NewsManager.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\News\\NewsManager.cs*",
+              "RelativeToolTip": "ZadintsApp\\Services\\News\\NewsManager.cs*",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwBQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:32:04.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RolesService.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Roles\\RolesService.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Services\\Roles\\RolesService.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Roles\\RolesService.cs",
+              "RelativeToolTip": "ZadintsApp\\Services\\Roles\\RolesService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:59:57.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbManagerGet.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Database\\DbManagerGet.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Services\\Database\\DbManagerGet.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Database\\DbManagerGet.cs",
+              "RelativeToolTip": "ZadintsApp\\Services\\Database\\DbManagerGet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T22:45:35.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThemeManager.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Theme\\ThemeManager.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Services\\Theme\\ThemeManager.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Theme\\ThemeManager.cs",
+              "RelativeToolTip": "ZadintsApp\\Services\\Theme\\ThemeManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:31:55.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NodoCircularDoble.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Nodo\\NodoCircularDoble.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Domain\\Nodo\\NodoCircularDoble.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Nodo\\NodoCircularDoble.cs",
+              "RelativeToolTip": "ZadintsApp\\Domain\\Nodo\\NodoCircularDoble.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:36:37.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NodoSimple.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Nodo\\NodoSimple.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Domain\\Nodo\\NodoSimple.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Nodo\\NodoSimple.cs",
+              "RelativeToolTip": "ZadintsApp\\Domain\\Nodo\\NodoSimple.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAhwA0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:30:41.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ModelNews.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ModelNews.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Domain\\Entities\\ModelNews.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ModelNews.cs",
+              "RelativeToolTip": "ZadintsApp\\Domain\\Entities\\ModelNews.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:16:47.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Components\\Views\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "ZadintsApp\\Components\\Views\\Dashboard.xaml",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Components\\Views\\Dashboard.xaml",
+              "RelativeToolTip": "ZadintsApp\\Components\\Views\\Dashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-11T18:42:02.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Dashboard.xaml.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Components\\Views\\Dashboard.xaml.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Components\\Views\\Dashboard.xaml.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Components\\Views\\Dashboard.xaml.cs",
+              "RelativeToolTip": "ZadintsApp\\Components\\Views\\Dashboard.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T18:42:03.292Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "2e5c23d6-1db2-4799-a542-c9085457bd7d",
+        "Display": 1,
+        "X": 189,
+        "Y": 282,
+        "Width": 980,
+        "Height": 646,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModelRoles.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ModelRoles.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Domain\\Entities\\ModelRoles.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ModelRoles.cs",
+              "RelativeToolTip": "ZadintsApp\\Domain\\Entities\\ModelRoles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:18:10.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ErrorModel.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ErrorModel.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Domain\\Entities\\ErrorModel.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ErrorModel.cs*",
+              "RelativeToolTip": "ZadintsApp\\Domain\\Entities\\ErrorModel.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T22:10:30.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ModelSqlParameter.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ModelSqlParameter.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Domain\\Entities\\ModelSqlParameter.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Domain\\Entities\\ModelSqlParameter.cs*",
+              "RelativeToolTip": "ZadintsApp\\Domain\\Entities\\ModelSqlParameter.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T22:52:04.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbManagerSet.cs",
+              "DocumentMoniker": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Database\\DbManagerSet.cs",
+              "RelativeDocumentMoniker": "ZadintsApp\\Services\\Database\\DbManagerSet.cs",
+              "ToolTip": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\Services\\Database\\DbManagerSet.cs*",
+              "RelativeToolTip": "ZadintsApp\\Services\\Database\\DbManagerSet.cs*",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T22:17:08.354Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

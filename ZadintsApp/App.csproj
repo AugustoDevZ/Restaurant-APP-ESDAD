@@ -13,6 +13,7 @@
     <Folder Include="Database\" />
     <Folder Include="Components\Layouts\Header\" />
     <Folder Include="Components\Layouts\Nav\" />
+    <Folder Include="Domain\TableDatabase\" />
   </ItemGroup>
 
   <ItemGroup>
