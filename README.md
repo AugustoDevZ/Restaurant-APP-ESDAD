@@ -19,8 +19,8 @@ App/
 ├── Config/         # Valores globales mayor utilizados
 ├── Database/       # Database interna para manejar datos offline
 ├── Domain/         # Entidades y Modelos
-└── Services/       # Métodos de lógica compleja utilizados para el funcionamiento del app
-
+└── Services/       # Métodos de lógica compleja utilizados para el funcionamiento del app 
+```
 ---
 
 ## 📺Estado de desarrollo
@@ -31,8 +31,9 @@ Este proyecto se encuentra actualmente en fase de desarrollo activo. El backend 
 ❤️ Installation
 1: Clona el repositorio en el directorio que gustes:
 
-```txt git clone https://github.com/AugustoDevZ/Restaurant-APP.git
-
+```txt
+git clone https://github.com/AugustoDevZ/Restaurant-APP.git
+```
 2: Abre el proyecto con Visual Studio u otro IDE de preferencia.
 
 
