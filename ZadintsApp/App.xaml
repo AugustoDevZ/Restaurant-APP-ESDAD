@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="/Components/Ui/Theme/Glaciar.xaml"/>
                 <ResourceDictionary Source="/Components/Ui/Controls/GbNotification.xaml"/>
                 <ResourceDictionary Source="/Components/Ui/Controls/DictionaryButtonsTheme.xaml"/>
+                <ResourceDictionary Source="/Components/Ui/Controls/Combobox.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

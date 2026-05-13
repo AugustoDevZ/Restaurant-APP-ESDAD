@@ -6,13 +6,13 @@ using System.Text;
 
 namespace App.Domain.DataStructures
 {
-    public class NodoCircularDoble<T>
+    public class NodoDoble<T>
     {
         public T Dato { get; set; }
 
-        public NodoCircularDoble<T>? Siguiente { get; set; }
-        public NodoCircularDoble<T>? Anterior { get; set; }
-        public NodoCircularDoble(T dato)
+        public NodoDoble<T>? Siguiente { get; set; }
+        public NodoDoble<T>? Anterior { get; set; }
+        public NodoDoble(T dato)
         {
             Dato = dato;
             Siguiente = null;

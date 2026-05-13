@@ -10,10 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Domain\TableDatabase\**" />
+    <EmbeddedResource Remove="Domain\TableDatabase\**" />
+    <None Remove="Domain\TableDatabase\**" />
+    <Page Remove="Domain\TableDatabase\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Database\" />
     <Folder Include="Components\Layouts\Header\" />
     <Folder Include="Components\Layouts\Nav\" />
-    <Folder Include="Domain\TableDatabase\" />
   </ItemGroup>
 
   <ItemGroup>

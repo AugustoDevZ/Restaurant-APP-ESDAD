@@ -33,7 +33,7 @@
             Header="" 
             Grid.Row="0"
             BorderThickness="0"
-            Margin="17,58,498,838"
+            Margin="17,58,498,899"
             Background="Transparent"
             Padding="0"
       
@@ -53,7 +53,7 @@
                 </ControlTemplate>
             </GroupBox.Template>
         </GroupBox>
-        
+
         <Label 
             x:Name="lblTemeSettingLore1" 
             Content="Cambia el tema oscuro o claro de la aplicación." 
@@ -63,7 +63,7 @@
             FontSize="15" 
             FontWeight="Light" 
             Height="30" 
-            IsEnabled="False" HorizontalContentAlignment="Left" Margin="31,92,671,854"/>
+            IsEnabled="False" HorizontalContentAlignment="Left" Margin="31,92,671,915"/>
         <Label 
             x:Name="lblTemeSetting_Copiar1" 
             Content="Modo de color" 
@@ -85,7 +85,7 @@ Height="29"
 Foreground="{DynamicResource FontColor}"
 FontSize="14.5"
 FontWeight="SemiBold" 
-Width="114" Click="btnTeme_Click" Margin="382,83,524,864">
+Width="114" Click="btnTeme_Click" Margin="384,86,522,922">
 
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -105,6 +105,91 @@ Width="114" Click="btnTeme_Click" Margin="382,83,524,864">
                             <Setter TargetName="bd"
                     Property="Background"
                     Value="{DynamicResource BackgroundButtonHover}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <GroupBox 
+            x:Name="gbxSettingTeme_Copiar1" 
+            Header="" 
+            Grid.Row="0"
+            BorderThickness="0"
+            Margin="16,146,499,749"
+            Background="Transparent"
+            Padding="0"
+      
+            AutomationProperties.Name="gbxHotbar">
+
+            <GroupBox.Template>
+                <ControlTemplate TargetType="{x:Type GroupBox}">
+                    <Border CornerRadius="15"
+                        BorderBrush="Transparent"
+                        BorderThickness="2"
+                        Background="{DynamicResource BackgroundContent1}"
+                        Effect="{DynamicResource ShadowStyle2}"
+                        Height="140"/>
+                </ControlTemplate>
+            </GroupBox.Template>
+        </GroupBox>
+        <Label 
+            x:Name="lblTemeSettingLore1_Copiar" 
+            Content="Administra los permisos de las opciones de la&#xD;&#xA;app mediante roles personalizables." 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="15" 
+            FontWeight="Light" 
+            IsEnabled="False" HorizontalContentAlignment="Left" Margin="30,209,672,765"/>
+        <Label 
+            x:Name="lblTemeSetting_Copiar" 
+            Content="Administrar Permisos App" 
+            HorizontalAlignment="Left" 
+            Margin="31,167,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="15" 
+            FontWeight="Bold" 
+            Height="30" 
+            Width="408" 
+            IsEnabled="False" HorizontalContentAlignment="Left"/>
+        <Button x:Name="btnRoles" 
+            Content="Administrar Roles" 
+            Height="29"
+            Foreground="{DynamicResource FontColor}"
+            FontSize="14.5"
+            FontWeight="SemiBold" Click="btnRoles_Click" Margin="362,202,522,805" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.008"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border x:Name="bd"
+                        Background="{DynamicResource BackgroundContentHover}"
+                        CornerRadius="6">
+
+                        <ContentPresenter HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <!-- Hover -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd"
+                                Property="Background"
+                                Value="{DynamicResource BackgroundButtonHover}"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>

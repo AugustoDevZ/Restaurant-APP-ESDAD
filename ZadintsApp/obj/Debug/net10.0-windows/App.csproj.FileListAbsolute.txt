@@ -66,6 +66,7 @@ D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\bin\Debug\net10.0-w
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\bin\Debug\net10.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\bin\Debug\net10.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App.csproj.AssemblyReference.cache
+D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Controls\Combobox.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Controls\DictionaryButtonsTheme.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Controls\GbNotification.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Theme\Citrico.baml
@@ -75,7 +76,8 @@ D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-w
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Theme\Nubarron.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Theme\Pantera.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\News.g.cs
-D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\ThemeSelector.g.cs
+D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\RolesGui.g.cs
+D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\ThemeGui.g.cs
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Content\Database.g.cs
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Content\Inventory.g.cs
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Content\Main.g.cs
@@ -89,7 +91,8 @@ D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-w
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App_MarkupCompile.lref
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\News.baml
-D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\ThemeSelector.baml
+D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\RolesGui.baml
+D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Body\ThemeGui.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Content\Database.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Content\Inventory.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Layouts\Content\Main.baml

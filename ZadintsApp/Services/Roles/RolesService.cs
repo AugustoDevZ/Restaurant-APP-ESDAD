@@ -9,8 +9,8 @@ namespace App.Services.Roles
 {
     public class RoleService
     {
-        private readonly ListaSimple<ModelRoles> _role = new ListaSimple<ModelRoles>();
-        public ErrorModel? Insert(ModelRoles content)
+        private static readonly ListaSimple<ModelRoles> _role = new ListaSimple<ModelRoles>();
+        public static ErrorModel? Insert(ModelRoles content)
         {
             if (content == null)
                 throw new ArgumentNullException("El valor ingresado a ModelRoles es nulo");

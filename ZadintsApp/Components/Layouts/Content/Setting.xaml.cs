@@ -21,9 +21,13 @@ namespace Zrutas.UI.Views.Frames
     /// </summary>
     public partial class Setting : Page
     {
+        Dashboard mainWindow = (Dashboard)Application.Current.MainWindow;
+
         public Setting()
         {
+
             InitializeComponent();
+
             btnTeme.Content = AppSetting.CurrentTheme.ToString();
         }
 
@@ -31,10 +35,13 @@ namespace Zrutas.UI.Views.Frames
         {
             //frContent.Navigate(new ThemeSelector());
 
-            Dashboard mainWindow = (Dashboard)Application.Current.MainWindow;
+            mainWindow.frBody.Navigate(new ThemeGui());
+            mainWindow.frBody.Visibility = Visibility.Visible;
+        }
 
-
-            mainWindow.frBody.Navigate(new ThemeSelector());
+        private void btnRoles_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.frBody.Navigate(new RolesGui());
             mainWindow.frBody.Visibility = Visibility.Visible;
         }
     }

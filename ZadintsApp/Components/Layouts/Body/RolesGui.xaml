@@ -1,0 +1,156 @@
+﻿<Page x:Class="App.Components.Layouts.Body.RolesGui"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:App.Components.Layouts.Body"
+      mc:Ignorable="d" 
+      d:DesignHeight="684" d:DesignWidth="1259"
+      Title="RolesGui">
+
+    <Border  ClipToBounds="True" CornerRadius="20" >
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.6" SpreadMethod="Pad" >
+
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FFADADAD" Offset="0.035"/>
+            </LinearGradientBrush>
+
+
+        </Border.Background>
+        <Grid Height="600" Width="1050" >
+
+
+
+            <Border 
+    CornerRadius="20" 
+    BorderBrush="{DynamicResource BackgroundMargin}" 
+    BorderThickness="2"
+    SnapsToDevicePixels="True"
+    Padding="0" RenderTransformOrigin="0.515,0.552"
+    Background="{DynamicResource BorderGradientBrush}" >
+
+                <Grid Margin="-4,0,-2,-2">
+
+                    <Label 
+                x:Name="lblThemeTitle" 
+                Content="Configura tus roles" 
+                HorizontalAlignment="Left" 
+                Margin="22,18,0,0" 
+                VerticalAlignment="Top" 
+                AutomationProperties.Name="" 
+                AutomationProperties.HelpText="" 
+                Foreground="{DynamicResource FontColor}" 
+                FontSize="22" 
+                FontWeight="Bold"/>
+
+
+
+
+
+
+
+
+                    <Label 
+                        x:Name="lblThemeTitle_Copiar" 
+                        Content="Ingresa el nombre del rol:" 
+                        HorizontalAlignment="Left" 
+                
+                        Margin="67,66,0,0" 
+                        VerticalAlignment="Top" 
+                        AutomationProperties.Name="" 
+                        AutomationProperties.HelpText="" 
+                        Foreground="{DynamicResource FontColor}" 
+                        FontSize="15" 
+                        FontWeight="SemiBold" Width="389" HorizontalContentAlignment="Left"/>
+                    <Label 
+                        x:Name="lblThemeTitle_Copiar1" 
+                        Content="Establece un color" 
+                        HorizontalAlignment="Left" 
+                
+                        Margin="67,137,0,0" 
+                        VerticalAlignment="Top" 
+                        AutomationProperties.Name="" 
+                        AutomationProperties.HelpText="" 
+                        Foreground="{DynamicResource FontColor}" 
+                        FontSize="15" 
+                        FontWeight="SemiBold" Width="389" HorizontalContentAlignment="Left"/>
+                    <Label 
+                        x:Name="lblThemeTitle_Copiar2" 
+                        Content="Describe de que trata este rol" 
+                        HorizontalAlignment="Left" 
+                
+                        Margin="67,204,0,0" 
+                        VerticalAlignment="Top" 
+                        AutomationProperties.Name="" 
+                        AutomationProperties.HelpText="" 
+                        Foreground="{DynamicResource FontColor}" 
+                        FontSize="15" 
+                        FontWeight="SemiBold" Width="228" HorizontalContentAlignment="Left"/>
+                    <Label 
+                        x:Name="lblThemeTitle_Copiar3" 
+                        Content="Selecciona sus permisos" 
+                        HorizontalAlignment="Left" 
+                
+                        Margin="67,344,0,0" 
+                        VerticalAlignment="Top" 
+                        AutomationProperties.Name="" 
+                        AutomationProperties.HelpText="" 
+                        Foreground="{DynamicResource FontColor}" 
+                        FontSize="15" 
+                        FontWeight="SemiBold" Width="389" HorizontalContentAlignment="Left"/>
+                    <Border Margin="67,101,703,466" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                        <TextBox Height="19"  TextWrapping="Wrap" Text="🛡️ Admin" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+                    </Border>
+                    <Border Margin="73,239,648,259" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                        <TextBox Height="80" TextWrapping="Wrap" Foreground="{DynamicResource FontColor}" Text="Rol de administración general del aplicativo. Este rol solo lo puede tener el dueño o socio del negocio."  VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+                    </Border>
+                    <Border Margin="67,168,703,399" Background="#4DF4F2F2"
+        BorderThickness="2"
+        BorderBrush="{DynamicResource BackgroundMargin}"
+        CornerRadius="12">
+
+                        <ComboBox Width="262"
+              Height="23"
+              Style="{StaticResource TransparentComboBox}">
+
+                            <ComboBoxItem Content="Ruta 1"/>
+                            <ComboBoxItem Content="Ruta 2"/>
+                            <ComboBoxItem Content="Ruta 3"/>
+
+                        </ComboBox>
+
+                    </Border>
+                    <Button x:Name="btnCloseRoleGui"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        BorderThickness="1"
+                        ToolTip="Cerrar aplicación"
+                        Padding="0"
+                        Margin="22,551,980,10" 
+                        Template="{DynamicResource SidebarTemplate}" Click="btnCloseRoleGui_Click">
+                        <Grid Height="31" Width="28">
+                            <Path x:Name="IconPath"
+                                Data="M10,4 H6 A2,2 0 0 0 4,6 V18 A2,2 0 0 0 6,20 H10                             M14,16 L18,12 L14,8 M18,12 H8"
+                        
+                                StrokeThickness="1.8"
+                                StrokeEndLineCap="Round"
+                                StrokeStartLineCap="Round"
+
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" Height="23" Stretch="Fill" Width="20">
+                                <Path.Stroke>
+                                    <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
+                                </Path.Stroke>
+                            </Path>
+                        </Grid>
+                    </Button>
+
+
+
+                </Grid>
+            </Border>
+        </Grid>
+
+    </Border>
+</Page>

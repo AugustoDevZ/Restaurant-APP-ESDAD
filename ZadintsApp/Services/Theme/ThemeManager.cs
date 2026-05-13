@@ -1,124 +1,58 @@
-﻿using System;
-using System.Windows;
+﻿using App.Config;
 using App.Domain.DataStructures;
-using App.Services.Database;
-using App.Config;
 using App.Domain.Entities;
+using App.Services.Database;
+using App.Services.ListGeneral;
+using System;
+using System.IO.Packaging;
+using System.Reflection.Metadata;
+using System.Windows;
+using System.Windows.Documents;
 
 namespace App.Services.Theme
 {
     class ThemeManager: AppSetting
     {
-        
-        public static NodoCircularDoble<ThemeModel> Cabeza { get; private set; }
-        public static NodoCircularDoble<ThemeModel> Cola { get; private set; } 
-
-
-        public ThemeManager()
+        public static void ChangeTheme(ThemeType newTheme, ThemeType? oldTheme)
         {
-            Cabeza = null;
-            Cola = null;
-        }
+            string? rutaNewTheme = null;
+            string? rutaOldTheme = null;
 
-        public static void InsertarFinal(ThemeModel theme)
-        {
-            NodoCircularDoble<ThemeModel> nuevoNodo = new NodoCircularDoble<ThemeModel>(theme);
-            if (Cola == null)
+            if (oldTheme is null)
             {
-             
-                Cabeza = Cola = nuevoNodo;
-                nuevoNodo.Siguiente = Cabeza;
-                nuevoNodo.Anterior = Cola;
-                return;
-            }
-            
-            nuevoNodo.Siguiente = Cabeza;
-            nuevoNodo.Anterior = Cola;
-
-            Cola.Siguiente = nuevoNodo;
-            Cabeza.Anterior = nuevoNodo;
-
-            Cola = nuevoNodo;
-        }
-
-   
-        public static void InsertarInicio(ThemeModel theme)
-        {
-            NodoCircularDoble<ThemeModel> nuevoNodo = new NodoCircularDoble<ThemeModel>(theme);
-            if (Cabeza == null)
-            {
-
-                Cabeza = Cola = nuevoNodo;
-                nuevoNodo.Siguiente = Cabeza;
-                nuevoNodo.Anterior = Cola;
-                return;
-            }
-
-            nuevoNodo.Siguiente = Cabeza;
-            Cabeza.Anterior = nuevoNodo;
-
-            nuevoNodo.Anterior = Cola;
-            Cola.Siguiente = nuevoNodo;
-            Cabeza = nuevoNodo;
-        }
-
-        
-        
-
-        public static void ChangeTheme(ThemeType theme)
-        
-        
-        {
-            if (Cabeza == null) return;
-
-            NodoCircularDoble<ThemeModel> actual = Cabeza;
-            string ruta = "", ruta2 = "";
- 
-
-            if (actual.Dato.Theme.Equals(theme)) 
-            {
-                ruta = $@"UI\Styles\Theme\Noche.xaml";
-                ruta2 = actual.Dato.Route.ToString();
+                rutaNewTheme = $@"Components\Ui\Theme\{newTheme.ToString()}.xaml";
+                rutaOldTheme = $@"Components\Ui\Theme\Noche.xaml";
             }
             else
             {
-                while (actual.Siguiente != Cabeza)
-                {
-                    if (actual.Siguiente.Dato.Theme.Equals(theme))
-                    {
-                        ruta2 = actual.Siguiente.Dato.Route.ToString();
-                        ruta = actual.Dato.Route.ToString();
-
-                        Cabeza = actual.Siguiente;
-                    }
-
-                    actual = actual.Siguiente;
-                }
-            }
-
-            if (String.IsNullOrWhiteSpace(ruta)) return;
+                rutaNewTheme = $@"Components\Ui\Theme\{newTheme.ToString()}.xaml";
+                rutaOldTheme = $@"Components\Ui\Theme\{oldTheme.ToString()}.xaml";
+            }            
 
             var dictionaries = Application.Current.Resources.MergedDictionaries;
-
             var oldDict = dictionaries
-                .FirstOrDefault(d => d.Source != null && d.Source.OriginalString.Contains(ruta));
-
-            if (oldDict is not null)
-            {
-                dictionaries.Remove(oldDict);
-            }
+                .FirstOrDefault(d => d.Source != null && d.Source.OriginalString.Contains(rutaOldTheme));
             try
             {
+                if (oldDict is not null)
+                {
+                    dictionaries.Remove(oldDict);
+                }
+
                 var newDict = new ResourceDictionary();
-                newDict.Source = new Uri(ruta2, UriKind.Relative);
+                newDict.Source = new Uri(rutaNewTheme, UriKind.Relative);
 
                 dictionaries.Add(newDict);
-                DbManagerSet.DatabaseSetTeme(theme.ToString());
-                //MessageBox.Show($"Tema cambiado a {theme.ToString()}");
+                DbManagerSet.DatabaseSetTeme(rutaNewTheme.ToString());
+                AppSetting.CurrentTheme = newTheme;
             }
-            catch { return; }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cambiar el tema: " + ex.Message);
+            }
 
-            
+
         }
+
     }
 }

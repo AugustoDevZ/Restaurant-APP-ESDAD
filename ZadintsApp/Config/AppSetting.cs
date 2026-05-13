@@ -8,9 +8,8 @@ namespace App.Config
 {
     public class AppSetting
     {
-        public static ThemeType CurrentTheme { get; protected set; }
-        public static int CurrentThemePost { get; protected set; }
-
+        public static ThemeType CurrentTheme { get; set; }
+   
         public const string AppName = "ZRutes";
 
         private static string exeDir = AppDomain.CurrentDomain.BaseDirectory;
