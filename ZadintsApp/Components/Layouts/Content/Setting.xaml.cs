@@ -28,7 +28,7 @@ namespace Zrutas.UI.Views.Frames
 
             InitializeComponent();
 
-            btnTeme.Content = AppSetting.CurrentTheme.ToString();
+            btnTeme.Content = "Muy pronto";//AppSetting.CurrentTheme.ToString();
         }
 
         private void btnTeme_Click(object sender, RoutedEventArgs e)

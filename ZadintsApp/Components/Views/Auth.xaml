@@ -23,7 +23,7 @@
         <Border.Clip>
             <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,1259,684"/>
         </Border.Clip>
-        
+
         <Grid>
             <Canvas IsHitTestVisible="False">
 
@@ -217,6 +217,12 @@
                     </Button>
 
                 </Grid>
+            </Border>
+            <Border Margin="413,253,560,395" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                <TextBox Height="19"  TextWrapping="Wrap" Text="n00487753@upn.pe" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+            </Border>
+            <Border Margin="413,340,560,309" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                <PasswordBox Height="19" Password="hola" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
             </Border>
         </Grid>
     </Border>

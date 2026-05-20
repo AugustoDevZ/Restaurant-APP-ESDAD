@@ -12,6 +12,7 @@ namespace App.Services.Database
 {
     internal class DbManagerGet
     {
+        /*
         public static ThemeType DatabaseGetTeme()
         {
             if (!File.Exists(AppSetting.dbPath))
@@ -68,6 +69,6 @@ namespace App.Services.Database
                     return ThemeType.Noche;
                 }
             }
-        }
+        }*/
     }
 }

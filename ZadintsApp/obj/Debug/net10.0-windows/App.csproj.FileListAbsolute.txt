@@ -66,7 +66,6 @@ D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\bin\Debug\net10.0-w
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\bin\Debug\net10.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\bin\Debug\net10.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App.csproj.AssemblyReference.cache
-D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Controls\Combobox.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Controls\DictionaryButtonsTheme.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Controls\GbNotification.baml
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Theme\Citrico.baml
@@ -113,3 +112,4 @@ D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-w
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App.pdb
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App.genruntimeconfig.cache
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\ref\App.dll
+D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\Components\Ui\Controls\Combobox.baml

@@ -10,7 +10,7 @@ namespace App.Services.Database
 {
     internal class DbManagerSet
     {
-
+        /*
         public static void DatabaseSetTeme(string name)
         {
             using (var conn = new SQLiteConnection(AppSetting.connectionString))
@@ -27,7 +27,7 @@ namespace App.Services.Database
                 }
             }
         }
-
+        */
         public static void DatabaseSet(string command, ListaSimple<ModelSqlParameter> list)
         {
             using (var conn = new SQLiteConnection(AppSetting.connectionString))

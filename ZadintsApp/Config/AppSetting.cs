@@ -8,7 +8,7 @@ namespace App.Config
 {
     public class AppSetting
     {
-        public static ThemeType CurrentTheme { get; set; }
+        //public static ThemeType CurrentTheme { get; set; }
    
         public const string AppName = "ZRutes";
 

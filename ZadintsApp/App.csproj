@@ -10,16 +10,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Components\Layouts\Header\**" />
+    <Compile Remove="Components\Layouts\Nav\**" />
     <Compile Remove="Domain\TableDatabase\**" />
+    <EmbeddedResource Remove="Components\Layouts\Header\**" />
+    <EmbeddedResource Remove="Components\Layouts\Nav\**" />
     <EmbeddedResource Remove="Domain\TableDatabase\**" />
+    <None Remove="Components\Layouts\Header\**" />
+    <None Remove="Components\Layouts\Nav\**" />
     <None Remove="Domain\TableDatabase\**" />
+    <Page Remove="Components\Layouts\Header\**" />
+    <Page Remove="Components\Layouts\Nav\**" />
     <Page Remove="Domain\TableDatabase\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Database\" />
-    <Folder Include="Components\Layouts\Header\" />
-    <Folder Include="Components\Layouts\Nav\" />
   </ItemGroup>
 
   <ItemGroup>

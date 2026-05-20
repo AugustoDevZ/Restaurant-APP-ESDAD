@@ -5,7 +5,7 @@ using System.Windows;
 using App.Services.Database;
 using App.Config;
 using App.Domain.Entities;
-using App.Services.Theme;
+//using App.Services.Theme;
 
 
 namespace ZadintsApp
@@ -16,13 +16,14 @@ namespace ZadintsApp
     public partial class App : Application
     {
         
-        
+        /*
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
             ThemeType actualTheme = DbManagerGet.DatabaseGetTeme();
             ThemeManager.ChangeTheme(actualTheme, null);
         }
+        */
     }
 
 }
