@@ -4,7 +4,7 @@ using System.Net.Http.Json;
 using System.Text;
 
 
-namespace App.Domain.DataStructures
+namespace App.Domain.DataStructures.Nodo
 {
     public class NodoDoble<T>
     {

@@ -41,11 +41,11 @@ namespace App.Services.Database
                     while (current != null)
                     {
                         cmd.Parameters.AddWithValue(
-                            current.Content.Name,
-                            current.Content.Value
+                            current.Dato.Name,
+                            current.Dato.Value
                         );
 
-                        current = current.Pointer;
+                        current = current.Siguiente;
                     }
 
                     cmd.ExecuteNonQuery();

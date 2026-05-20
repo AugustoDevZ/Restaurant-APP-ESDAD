@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\App.xaml
-20248473279
+19-1133731168
 
-271933327950
+271942031252
 207992755112
-Components\Layouts\Body\News.xaml;Components\Layouts\Body\RolesGui.xaml;Components\Layouts\Body\ThemeGui.xaml;Components\Layouts\Content\Database.xaml;Components\Layouts\Content\Inventory.xaml;Components\Layouts\Content\Main.xaml;Components\Layouts\Content\Products.xaml;Components\Layouts\Content\Selling.xaml;Components\Layouts\Content\Setting.xaml;Components\Ui\Controls\Combobox.xaml;Components\Ui\Controls\DictionaryButtonsTheme.xaml;Components\Ui\Controls\GbNotification.xaml;Components\Ui\Theme\Citrico.xaml;Components\Ui\Theme\Glaciar.xaml;Components\Ui\Theme\Mentolada.xaml;Components\Ui\Theme\Noche.xaml;Components\Ui\Theme\Nubarron.xaml;Components\Ui\Theme\Pantera.xaml;Components\Views\Auth.xaml;Components\Views\Dashboard.xaml;
+Components\Layouts\Body\RolesGui.xaml;Components\Layouts\Body\ThemeGui.xaml;Components\Layouts\Content\Database.xaml;Components\Layouts\Content\Inventory.xaml;Components\Layouts\Content\Main.xaml;Components\Layouts\Content\Products.xaml;Components\Layouts\Content\Selling.xaml;Components\Layouts\Content\Setting.xaml;Components\Ui\Controls\Combobox.xaml;Components\Ui\Controls\DictionaryButtonsTheme.xaml;Components\Ui\Controls\GbNotification.xaml;Components\Ui\Theme\Citrico.xaml;Components\Ui\Theme\Glaciar.xaml;Components\Ui\Theme\Mentolada.xaml;Components\Ui\Theme\Noche.xaml;Components\Ui\Theme\Nubarron.xaml;Components\Ui\Theme\Pantera.xaml;Components\Views\Auth.xaml;Components\Views\Dashboard.xaml;
 
 False
 

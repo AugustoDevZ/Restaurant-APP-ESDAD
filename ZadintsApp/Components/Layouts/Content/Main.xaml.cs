@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.Config;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,12 @@ namespace Zrutas.UI.Views.Content
         public Main()
         {
             InitializeComponent();
+
+            tbPlatos.Text = $"{AppSetting.AppName}";
+
         }
+
+
+
     }
 }

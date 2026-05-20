@@ -1,5 +1,4 @@
-﻿using App.Domain.DataStructures;
-using App.Domain.Entities;
+﻿using App.Domain.DataStructures.Nodo;
 
 namespace App.Services.ListGeneral
 {

@@ -13,7 +13,7 @@ namespace App.Services.ListGeneral
         public void InsertHead(T content)
         {
             NodoSimple<T> newNodo = new NodoSimple<T>(content);
-            newNodo.Pointer = Head;
+            newNodo.Siguiente = Head;
             Head = newNodo;
             if (Last is null)
             {
@@ -31,17 +31,55 @@ namespace App.Services.ListGeneral
                 return;
             }
 
-            Last.Pointer = newNodo;
+            Last.Siguiente = newNodo;
             Last = newNodo;
         }
-        public void Update(T content)
-        {
 
+        private T Search(Predicate<T> criterio)
+        {           
+            int count = 0;
+            NodoSimple<T> current = Head;
+            while (current != null)
+            {
+                if (criterio(current.Dato))
+                {
+                    return current.Dato;
+                }
+                current = current.Siguiente;
+                count++;
+            }
+            return default(T);
         }
 
-        public void Delete(T content)
+        public bool Delete(Predicate<T> criterio)
         {
+            if(Head is null) return false;
 
+            if (criterio(Head.Dato))
+            {
+                if(Head.Siguiente == null)
+                {
+                    Head = null;
+                    return true;
+                }
+
+                Head = Head.Siguiente;
+                return true;
+            }
+
+            NodoSimple<T> current = Head;
+
+            while (current.Siguiente != null)
+            {
+                if(criterio(current.Siguiente.Dato))
+                {
+                    current.Siguiente = current .Siguiente.Siguiente;
+                    return true;
+                }
+                current = current.Siguiente;
+
+            }
+            return false;
         }
 
 

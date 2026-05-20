@@ -7,14 +7,14 @@ namespace App.Domain.DataStructures.Nodo
 {
     public class NodoSimple<T>
     {
-        public T Content { get; set; }
+        public T Dato { get; set; }
 
-        public NodoSimple<T> Pointer { get; set; }
+        public NodoSimple<T> Siguiente { get; set; }
 
-        public NodoSimple(T content)
+        public NodoSimple(T dato)
         {
-            Content = content;
-            Pointer = null;
+            Dato = dato;
+            Siguiente = null;
         }
     }
 }

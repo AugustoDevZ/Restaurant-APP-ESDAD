@@ -65,7 +65,7 @@ namespace App.Components.Views
 
         private void btnNews_Click(object sender, RoutedEventArgs e)
         {
-            frContent.Navigate(new News());
+           
         }
         
 

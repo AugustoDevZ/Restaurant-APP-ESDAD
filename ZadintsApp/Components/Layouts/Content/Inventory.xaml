@@ -9,6 +9,186 @@
       Title="Inventory">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- ENCABEZADO -->
+
+        <!-- CUERPO PRINCIPAL -->
+        <Grid Grid.Row="1" Margin="30,24,30,24">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="24"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- PANEL IZQUIERDO: FORMULARIO -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                        Text="AGREGAR PLATO"
+                        FontSize="13" FontWeight="Bold"
+                        Foreground="#E8440A"
+                        Margin="0,0,0,16"/>
+
+                <TextBlock Grid.Row="1"
+                        Text="Nombre del plato"
+                        FontSize="11"
+                        Foreground="#888888"
+                        Margin="0,0,0,4"/>
+
+                <TextBox x:Name="TxtNombre"
+                      Grid.Row="2"
+                      Padding="12,10"
+                      FontSize="14"
+                      Foreground="Gray"
+                      Background="#F5F5F5"
+                      BorderBrush="#E8440A"
+                      BorderThickness="0,0,0,2"
+                      Tag="Ej: Lomo Saltado"
+                      Text="Ej: Lomo Saltado"
+                      GotFocus="TextBox_GotFocus"
+                      LostFocus="TextBox_LostFocus"
+                      Margin="0,0,0,16"/>
+
+                <TextBlock Grid.Row="3"
+                        Text="Descripción"
+                        FontSize="11"
+                        Foreground="#888888"
+                        Margin="0,0,0,4"/>
+
+                <TextBox x:Name="TxtDescripcion"
+                      Grid.Row="4"
+                      Padding="12,10"
+                      FontSize="14"
+                      Foreground="Gray"
+                      Background="#F5F5F5"
+                      BorderBrush="#E8440A"
+                      BorderThickness="0,0,0,2"
+                      Tag="Ej: Con papas y arroz"
+                      Text="Ej: Con papas y arroz"
+                      GotFocus="TextBox_GotFocus"
+                      LostFocus="TextBox_LostFocus"
+                      Margin="0,0,0,16"/>
+
+                <TextBlock Grid.Row="5"
+                        Text="Precio (S/.)"
+                        FontSize="11"
+                        Foreground="#888888"
+                        Margin="0,0,0,4"/>
+
+                <TextBox x:Name="TxtPrecio"
+                      Grid.Row="6"
+                      Padding="12,10"
+                      FontSize="14"
+                      Foreground="Gray"
+                      Background="#F5F5F5"
+                      BorderBrush="#E8440A"
+                      BorderThickness="0,0,0,2"
+                      Tag="Ej: 25.00"
+                      Text="Ej: 25.00"
+                      GotFocus="TextBox_GotFocus"
+                      LostFocus="TextBox_LostFocus"
+                      Margin="0,0,0,24"/>
+
+                <Button Grid.Row="7"
+                     Content="+ AGREGAR PLATO"
+                     Click="BtnAgregar_Click"
+                     Padding="0,14"
+                     FontSize="13"
+                     FontWeight="Bold"
+                     Background="#E8440A"
+                     Foreground="White"
+                     BorderThickness="0"
+                     Cursor="Hand"
+                     Margin="0,0,0,12"/>
+
+                <Button Grid.Row="8"
+                     Content="— ELIMINAR SELECCIONADO"
+                     Click="BtnEliminar_Click"
+                     Padding="0,14"
+                     FontSize="13"
+                     FontWeight="Bold"
+                     Background="White"
+                     Foreground="#E8440A"
+                     BorderBrush="#E8440A"
+                     BorderThickness="1"
+                     Cursor="Hand"/>
+            </Grid>
+
+            <!-- SEPARADOR -->
+            <Rectangle Grid.Column="1"
+                    Width="1"
+                    Fill="#DDDDDD"
+                    HorizontalAlignment="Center"/>
+
+            <!-- PANEL DERECHO: LISTA -->
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                        Text="PLATOS DISPONIBLES"
+                        FontSize="13" FontWeight="Bold"
+                        Foreground="#E8440A"
+                        Margin="0,0,0,16"/>
+
+                <ListBox x:Name="LstPlatos"
+                      Grid.Row="1"
+                      Background="#F9F9F9"
+                      BorderBrush="#EEEEEE"
+                      BorderThickness="1"
+                      Padding="8">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Padding" Value="16,12"/>
+                            <Setter Property="Margin" Value="0,4"/>
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Foreground" Value="#222222"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#E8440A"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+
+                <TextBlock Grid.Row="2"
+                        x:Name="TxtTotal"
+                        FontSize="12"
+                        Foreground="#AAAAAA"
+                        Margin="0,12,0,0"/>
+            </Grid>
+        </Grid>
+        <Label 
+            x:Name="lblTitleGlobal" 
+            Content="Inventario" 
+            HorizontalAlignment="Left" 
+            Margin="30,0,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="25" 
+            FontWeight="Bold"/>
     </Grid>
 </Page>
