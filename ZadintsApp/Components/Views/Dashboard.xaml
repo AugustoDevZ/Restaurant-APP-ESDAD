@@ -672,7 +672,7 @@ Duration="0:0:0.2"/>
             </Button>
 
             <!---=================================================[ Title Content ]=============================================================-->
-            <Image x:Name="producsr" Margin="-8,-13,1048,503" Source="/Resources/logo.png" Stretch="Fill"/>
+            
 
 
 
@@ -683,8 +683,8 @@ Duration="0:0:0.2"/>
                 HorizontalAlignment="Left" Margin="588,642,0,-2" Cursor=""/>
 
 
-
-
+            
+            <Image x:Name="producsr" Margin="-34,-40,1030,498" Source="/Components/Views/logo.png" Stretch="Uniform"/>
 
             <Frame x:Name="frContent"  NavigationUIVisibility="Hidden" Content="Frame" Margin="205,75,10,17" Height="550" Width="1020" Navigated="Frame_Content"/>
             <Frame x:Name="frBody"  NavigationUIVisibility="Hidden" Content="Frame" Navigated="Frame_Content" Margin="-8,-8,-3,-8"

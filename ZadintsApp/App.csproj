@@ -41,6 +41,11 @@
 
   <ItemGroup>
     <None Remove="C:\Users\AUGUSTO RODRIGUEZ\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libgcc_s_seh-1.dll" />
+    <None Remove="Components\Views\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Components\Views\logo.png" />
   </ItemGroup>
 
 </Project>

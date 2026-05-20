@@ -22,9 +22,9 @@
     <Color x:Key="DarkShadow">#55000000</Color>
 
     <Color x:Key="DarkButtons">#1A2D36</Color>
-    <Color x:Key="DarkButtonsHover">#1BA1AB</Color>
+    <Color x:Key="DarkButtonsHover">#E8440A</Color>
 
-    <Color x:Key="SidebarButtonHover">#1BA1AB</Color>
+    <Color x:Key="SidebarButtonHover">#E8440A</Color>
     <Color x:Key="SidebarButtonNormal">#8C8E97</Color>
     <Color x:Key="SidebarLine">#C9CDD6</Color>
 

@@ -99,15 +99,17 @@
                         Foreground="{DynamicResource FontColor}" 
                         FontSize="15" 
                         FontWeight="SemiBold" Width="389" HorizontalContentAlignment="Left"/>
-                    <Border Margin="67,101,703,466" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
-                        <TextBox Height="19"  TextWrapping="Wrap" Text="🛡️ Admin" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+                    <Border Margin="67,101,703,466" BorderBrush="#E8440A" BorderThickness="0,0,0,2" CornerRadius="12" Background="White">
+                        <TextBox  Height="19"  TextWrapping="Wrap" Text="🛡️ Admin" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
                     </Border>
-                    <Border Margin="73,239,648,259" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
-                        <TextBox Height="80" TextWrapping="Wrap" Foreground="{DynamicResource FontColor}" Text="Rol de administración general del aplicativo. Este rol solo lo puede tener el dueño o socio del negocio."  VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+                    <Border Margin="73,239,648,259" BorderBrush="#E8440A" BorderThickness="0,0,0,2" CornerRadius="12" Background="White">
+                        <TextBox
+                            Height="80" 
+                            TextWrapping="Wrap" 
+                            Foreground="{DynamicResource FontColor}" Text="Rol de administración general del aplicativo. Este rol solo lo puede tener el dueño o socio del negocio."  VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
                     </Border>
-                    <Border Margin="67,168,703,399" Background="#4DF4F2F2"
-        BorderThickness="2"
-        BorderBrush="{DynamicResource BackgroundMargin}"
+                    <Border Margin="67,168,703,399" Background="White"
+        BorderBrush="#E8440A" BorderThickness="0,0,0,2"
         CornerRadius="12">
 
                         <ComboBox Width="262"

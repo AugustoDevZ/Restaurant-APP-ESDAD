@@ -10,13 +10,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="59"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <!-- ENCABEZADO -->
-
-        <!-- CUERPO PRINCIPAL -->
         <Grid Grid.Row="1" Margin="30,24,30,24">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="320"/>
@@ -24,7 +21,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- PANEL IZQUIERDO: FORMULARIO -->
+
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -41,7 +38,7 @@
                 <TextBlock Grid.Row="0"
                         Text="AGREGAR PLATO"
                         FontSize="13" FontWeight="Bold"
-                        Foreground="#E8440A"
+                        Foreground="{DynamicResource FontColor}"
                         Margin="0,0,0,16"/>
 
                 <TextBlock Grid.Row="1"
@@ -50,28 +47,52 @@
                         Foreground="#888888"
                         Margin="0,0,0,4"/>
 
-                <TextBox x:Name="TxtNombre"
-                      Grid.Row="2"
-                      Padding="12,10"
-                      FontSize="14"
-                      Foreground="Gray"
-                      Background="#F5F5F5"
-                      BorderBrush="#E8440A"
-                      BorderThickness="0,0,0,2"
-                      Tag="Ej: Lomo Saltado"
-                      Text="Ej: Lomo Saltado"
-                      GotFocus="TextBox_GotFocus"
-                      LostFocus="TextBox_LostFocus"
-                      Margin="0,0,0,16"/>
+                <Border 
+                    CornerRadius="15" 
+                    Grid.Row="2"
+                    BorderThickness="2" 
+                    Background="Aqua" 
+                    SnapsToDevicePixels="True"
+                    ClipToBounds="True"
+                    Margin="0,0,0,6">
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="15" RadiusY="20" Rect="2,0,316,45"/>
+                    </Border.Clip>
+
+                    <TextBox x:Name="TxtNombre"
+                        
+                        Padding="12,10"
+                        FontSize="14"
+                        Foreground="Gray"
+                        Background="#F5F5F5"
+                        BorderBrush="#E8440A"
+                        BorderThickness="0,0,0,2"
+                        Tag="Ej: Lomo Saltado"
+                        Text="Ej: Lomo Saltado"
+                        GotFocus="TextBox_GotFocus"                            
+                        LostFocus="TextBox_LostFocus"
+                        Margin="0,0,0,0"/>
+                </Border>
 
                 <TextBlock Grid.Row="3"
-                        Text="Descripción"
-                        FontSize="11"
-                        Foreground="#888888"
-                        Margin="0,0,0,4"/>
-
-                <TextBox x:Name="TxtDescripcion"
-                      Grid.Row="4"
+                    Text="Descripción"
+                    FontSize="11"
+                    Foreground="#888888"
+                    Margin="0,0,0,4"/>
+                
+                <Border 
+                     CornerRadius="15" 
+                     Grid.Row="4"
+                     BorderThickness="2" 
+                     Background="Aqua" 
+                     SnapsToDevicePixels="True"
+                     ClipToBounds="True"
+                     Margin="0,0,0,16">
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="15" RadiusY="20" Rect="2,0,316,45"/>
+                    </Border.Clip>
+                    <TextBox x:Name="TxtDescripcion"
+                      
                       Padding="12,10"
                       FontSize="14"
                       Foreground="Gray"
@@ -82,60 +103,73 @@
                       Text="Ej: Con papas y arroz"
                       GotFocus="TextBox_GotFocus"
                       LostFocus="TextBox_LostFocus"
-                      Margin="0,0,0,16"/>
-
+                      Margin="0,0,0,0"/>
+                </Border>
                 <TextBlock Grid.Row="5"
                         Text="Precio (S/.)"
                         FontSize="11"
                         Foreground="#888888"
                         Margin="0,0,0,4"/>
+                <Border 
+                     CornerRadius="15" 
+                     Grid.Row="6"
+                     BorderThickness="2" 
+      
+                     SnapsToDevicePixels="True"
+                     ClipToBounds="True"
+                     Margin="0,0,0,24">
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="15" RadiusY="20" Rect="2,0,316,45"/>
+                    </Border.Clip>
+                    <TextBox x:Name="TxtPrecio"
+                        Padding="12,10"
+                        FontSize="14"
+                        Foreground="Gray"
+                        Background="#F5F5F5"
+                        BorderBrush="#E8440A"
+                        BorderThickness="0,0,0,2"
+                        Tag="Ej: 25.00"
+                        Text="Ej: 25.00"
+                        GotFocus="TextBox_GotFocus"
+                        LostFocus="TextBox_LostFocus"
+                        Margin="0,0,0,0"/> 
+                </Border>
+               
 
-                <TextBox x:Name="TxtPrecio"
-                      Grid.Row="6"
-                      Padding="12,10"
-                      FontSize="14"
-                      Foreground="Gray"
-                      Background="#F5F5F5"
-                      BorderBrush="#E8440A"
-                      BorderThickness="0,0,0,2"
-                      Tag="Ej: 25.00"
-                      Text="Ej: 25.00"
-                      GotFocus="TextBox_GotFocus"
-                      LostFocus="TextBox_LostFocus"
-                      Margin="0,0,0,24"/>
-
-                <Button Grid.Row="7"
+                <Button 
                      Content="+ AGREGAR PLATO"
                      Click="BtnAgregar_Click"
-                     Padding="0,14"
+                     Padding="0,16"
                      FontSize="13"
+                     Height="40"
+                     Grid.Row="7" 
                      FontWeight="Bold"
                      Background="#E8440A"
                      Foreground="White"
+                     Margin="0,0,0,12"
+                     Template="{DynamicResource ButtonTwo}"
                      BorderThickness="0"
-                     Cursor="Hand"
-                     Margin="0,0,0,12"/>
-
-                <Button Grid.Row="8"
+                     />
+                <Button 
                      Content="— ELIMINAR SELECCIONADO"
                      Click="BtnEliminar_Click"
                      Padding="0,14"
                      FontSize="13"
+                     Height="50"
                      FontWeight="Bold"
+                     Template="{DynamicResource ButtonOne}"
                      Background="White"
                      Foreground="#E8440A"
+                     Grid.Row="8" 
                      BorderBrush="#E8440A"
-                     BorderThickness="1"
                      Cursor="Hand"/>
             </Grid>
 
-            <!-- SEPARADOR -->
             <Rectangle Grid.Column="1"
                     Width="1"
                     Fill="#DDDDDD"
                     HorizontalAlignment="Center"/>
 
-            <!-- PANEL DERECHO: LISTA -->
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -146,15 +180,16 @@
                 <TextBlock Grid.Row="0"
                         Text="PLATOS DISPONIBLES"
                         FontSize="13" FontWeight="Bold"
-                        Foreground="#E8440A"
+                        Foreground="{DynamicResource FontColor}"
                         Margin="0,0,0,16"/>
 
                 <ListBox x:Name="LstPlatos"
                       Grid.Row="1"
                       Background="#F9F9F9"
                       BorderBrush="#EEEEEE"
-                      BorderThickness="1"
+                      BorderThickness="1"                         
                       Padding="8">
+                        
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
                             <Setter Property="Padding" Value="16,12"/>
@@ -183,12 +218,12 @@
             x:Name="lblTitleGlobal" 
             Content="Inventario" 
             HorizontalAlignment="Left" 
-            Margin="30,0,0,0" 
+            Margin="23,0,0,0" 
             VerticalAlignment="Top" 
             AutomationProperties.Name="" 
             AutomationProperties.HelpText="" 
             Foreground="{DynamicResource FontColor}" 
             FontSize="25" 
-            FontWeight="Bold"/>
+            FontWeight="Bold" Height="43" Width="131"/>
     </Grid>
 </Page>

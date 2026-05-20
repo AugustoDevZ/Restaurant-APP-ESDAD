@@ -80,37 +80,15 @@
             IsEnabled="False" HorizontalContentAlignment="Left"/>
 
         <Button x:Name="btnTeme" 
-Content="Cambiar Tema" 
-Height="29"
-Foreground="{DynamicResource FontColor}"
-FontSize="14.5"
-FontWeight="SemiBold" 
-Width="114" Click="btnTeme_Click" Margin="384,86,522,922">
+            Content="Cambiar Tema" 
+            Height="35"
+            Foreground="White"
+            FontSize="14.5"
+            FontWeight="SemiBold" 
+            Width="114" Click="btnTeme_Click" Margin="384,86,522,922"
+            Background="#EA6233"
+            Template="{DynamicResource ButtonTwo}">
 
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-
-                    <Border x:Name="bd"
-            Background="{DynamicResource BackgroundContentHover}"
-            CornerRadius="6">
-
-                        <ContentPresenter HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-
-                        <!-- Hover -->
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bd"
-                    Property="Background"
-                    Value="{DynamicResource BackgroundButtonHover}"/>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-
-                </ControlTemplate>
-            </Button.Template>
         </Button>
         <GroupBox 
             x:Name="gbxSettingTeme_Copiar1" 
@@ -159,43 +137,12 @@ Width="114" Click="btnTeme_Click" Margin="384,86,522,922">
             IsEnabled="False" HorizontalContentAlignment="Left"/>
         <Button x:Name="btnRoles" 
             Content="Administrar Roles" 
-            Height="29"
-            Foreground="{DynamicResource FontColor}"
+            Height="35"
+            Foreground="White"
+            Background="#EA6233"
+            Template="{DynamicResource ButtonTwo}"
             FontSize="14.5"
             FontWeight="SemiBold" Click="btnRoles_Click" Margin="362,202,522,805" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.008"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-
-                    <Border x:Name="bd"
-                        Background="{DynamicResource BackgroundContentHover}"
-                        CornerRadius="6">
-
-                        <ContentPresenter HorizontalAlignment="Center"
-                            VerticalAlignment="Center"/>
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-
-                        <!-- Hover -->
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bd"
-                                Property="Background"
-                                Value="{DynamicResource BackgroundButtonHover}"/>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-
-                </ControlTemplate>
-            </Button.Template>
         </Button>
     </Grid>
 </Page>

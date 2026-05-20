@@ -11,7 +11,8 @@
                 <ResourceDictionary Source="/Components/Ui/Controls/GbNotification.xaml"/>
                 <ResourceDictionary Source="/Components/Ui/Controls/DictionaryButtonsTheme.xaml"/>
                 <ResourceDictionary Source="/Components/Ui/Controls/Combobox.xaml"/>
-
+                <ResourceDictionary Source="/Components/Ui/Controls/ButtonsOne.xaml"/>
+                <ResourceDictionary Source="/Components/Ui/Controls/ButtonsTwo.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
