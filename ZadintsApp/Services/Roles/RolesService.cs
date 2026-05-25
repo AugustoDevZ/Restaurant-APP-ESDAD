@@ -23,18 +23,15 @@ namespace App.Services.Roles
 
             _role.InsertHead(content);
 
-
+            string command = "INSERT INTO Roles (Name,Description, Permissions, Color) VALUES (@Name,@Description,  @Permissions,@Color)";
 
             ListaSimple<ModelSqlParameter> sqlParam = new ListaSimple<ModelSqlParameter>();
-
             sqlParam.InsertLast(new ModelSqlParameter("@Name", content.Name));
             sqlParam.InsertLast(new ModelSqlParameter("@Description", content.Description));
             sqlParam.InsertLast(new ModelSqlParameter("@Permissions", content.Permissions));
             sqlParam.InsertLast(new ModelSqlParameter("@Color", content.Color));
 
-            DbManagerSet.DatabaseSet
-                ("INSERT INTO Roles (Name,Description, Permissions, Color) VALUES (@Name,@Description,  @Permissions,@Color)",
-                sqlParam);
+            DatabaseService.DatabaseSet(command, sqlParam);
 
             return null;
         }
@@ -45,3 +42,37 @@ namespace App.Services.Roles
 
     }
 }
+
+
+/*
+ 
+ 
+ 
+ 
+ 
+ <Application x:Class="ZadintsApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:App.Components.Views"
+             StartupUri="Components/Views/Dashboard.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="/Components/Ui/Theme/Glaciar.xaml"/>
+                <ResourceDictionary Source="/Components/Ui/Controls/GbNotification.xaml"/>
+                <ResourceDictionary Source="/Components/Ui/Controls/DictionaryButtonsTheme.xaml"/>
+                <ResourceDictionary Source="/Components/Ui/Controls/Combobox.xaml"/>
+                <ResourceDictionary Source="/Components/Ui/Controls/ButtonsOne.xaml"/>
+                <ResourceDictionary Source="/Components/Ui/Controls/ButtonsTwo.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+ 
+ 
+ 
+ 
+ 
+ 
+ */

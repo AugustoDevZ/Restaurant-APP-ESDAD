@@ -8,7 +8,139 @@
       d:DesignHeight="550" d:DesignWidth="1020"
       Title="Selling">
 
-    <Grid>
-        
+    <Grid Margin="15">
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2.7*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            Margin="0,0,5,73"
+                Effect="{DynamicResource ShadowStyle2}"
+            Padding="18">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+
+                <DataGrid x:Name="dgCarrito"
+                      Grid.Row="0"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      BorderThickness="0"
+                      Background="Transparent"
+                      RowBackground="White"
+                      AlternatingRowBackground="#F3F3F3"
+                      FontSize="17"
+                      RowHeight="45" Grid.RowSpan="3">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Producto"
+                                        Binding="{Binding Nombre}"
+                                        Width="*"/>
+
+                        <DataGridTextColumn Header="Cantidad"
+                                        Binding="{Binding Cantidad}"
+                                        Width="90"/>
+
+                        <DataGridTextColumn Header="Precio"
+                                        Binding="{Binding Precio}"
+                                        Width="90"/>
+
+                        <DataGridTextColumn Header="Total"
+                                        Binding="{Binding Total}"
+                                        Width="90"/>
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Column="1"
+            Background="#FAFAFA"
+Effect="{DynamicResource ShadowStyle2}"
+            CornerRadius="20"
+            Padding="18">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                
+                <ComboBox x:Name="cbFiltro"
+                      Width="280"
+                      Height="45"
+                      FontSize="18"
+                      SelectedIndex="0" Margin="253,0,0,0">
+                        
+                    <ComboBoxItem Content="Todos los productos"/>
+                    <ComboBoxItem Content="Platos"/>
+                    <ComboBoxItem Content="Gaseosas"/>
+                    <ComboBoxItem Content="Jugos"/>
+                    <ComboBoxItem Content="Tragos"/>
+
+                </ComboBox>
+
+                <ScrollViewer Grid.Row="1"
+                          Margin="0,20,0,0"
+                          VerticalScrollBarVisibility="Auto">
+
+                    <WrapPanel x:Name="wpProductos"/>
+
+                </ScrollViewer>
+
+            </Grid>
+
+        </Border>
+        <StackPanel
+         Orientation="Horizontal"
+         HorizontalAlignment="Right"
+         Margin="0,478,307,18">
+            <TextBlock Text="TOTAL: "
+            FontSize="14"
+             Foreground="{DynamicResource FontColor}"
+            FontWeight="Bold"/>
+
+            <TextBlock x:Name="txtTotal"
+            Text="S/ 0.00"
+            FontSize="14"
+             Foreground="{DynamicResource FontColor}"
+            FontWeight="Bold"/>
+
+        </StackPanel>
+        <Button x:Name="btnPagar"
+                    Content="Pagar Compra"
+                    Background="#EA6233"
+                    Foreground="White"
+                    Width="140"
+                    Height="40"
+                    FontSize="14.5"
+                    FontWeight="SemiBold" 
+                    Template="{DynamicResource ButtonTwo}"
+                    HorizontalAlignment="Right"
+                    Margin="0,470,10,10" Click="btnPagar_Click" />
+
     </Grid>
 </Page>

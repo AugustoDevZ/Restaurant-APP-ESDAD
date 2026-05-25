@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
 
 namespace App.Domain.Entities
@@ -8,6 +9,7 @@ namespace App.Domain.Entities
     {
         public  String Title { get; set; }
         public string Message { get; set; }
+        public string Color { get; set; }
 
         public ErrorModel(string message, String title)
         {
@@ -19,6 +21,27 @@ namespace App.Domain.Entities
             }
 
             Title = title;
+            ColorValue();
+        }
+
+        private void ColorValue()
+        {
+            if (Title.Contains("Error", StringComparison.OrdinalIgnoreCase))
+            {
+                Color = "#FF3B3B";
+            }
+            else if (Title.Contains("Aviso", StringComparison.OrdinalIgnoreCase ))
+            {
+                Color = "#EACE3A";
+            }
+            else if (Title.Contains("Éxito", StringComparison.OrdinalIgnoreCase) || Title.Contains("Correcto", StringComparison.OrdinalIgnoreCase))
+            {
+                Color = "#4CA64C";
+            }
+            else
+            {
+                Color = "#A5A5D2";
+            }
         }
     }
 }

@@ -89,29 +89,7 @@
                         <PathGeometry Figures="M0,400 C250,200 600,600 1000,300 "/>
                     </Path.Data>
                 </Path>
-                <Button x:Name="btnCloseThemeSelector"
-                Background="Transparent"
-                BorderBrush="Transparent"
-                BorderThickness="1"
-                ToolTip="Cerrar aplicación"
-                Padding="0" 
-                Template="{DynamicResource SidebarTemplate}" Click="btnClose_Click" Height="71" Canvas.Left="26" Canvas.Top="590" Width="87">
-                    <Grid Height="62" Width="57">
-                        <Path x:Name="IconPath"
-                        Data="M10,4 H6 A2,2 0 0 0 4,6 V18 A2,2 0 0 0 6,20 H10                             M14,16 L18,12 L14,8 M18,12 H8"
-                
-                        StrokeThickness="1.8"
-                        StrokeEndLineCap="Round"
-                        StrokeStartLineCap="Round"
 
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center" Height="42" Stretch="Fill" Width="37">
-                            <Path.Stroke>
-                                <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
-                            </Path.Stroke>
-                        </Path>
-                    </Grid>
-                </Button>
 
             </Canvas>
             <Border 
@@ -125,7 +103,7 @@
 
                 <Grid Margin="-4,0,-2,-2">
                     <Label 
-                x:Name="lblThemeTitle" 
+                x:Name="lblTitle" 
                 Content="¡Hola de nuevo!" 
                 HorizontalAlignment="Center" 
                 
@@ -137,7 +115,7 @@
                 FontSize="20" 
                 FontWeight="Bold" Width="440" HorizontalContentAlignment="Center"/>
                     <Label 
-                x:Name="lblThemeTitle_Copiar" 
+                x:Name="lblDescription" 
                 Content="Nos alegramos mucho de volverte a ver" 
                 HorizontalAlignment="Center" 
                 
@@ -149,11 +127,11 @@
                 FontSize="15" 
                 FontWeight="SemiBold" Width="440" HorizontalContentAlignment="Center"/>
                     <Label 
-                x:Name="lblAccouncreate" 
+                x:Name="lblAuthMode" 
                 Content="¿Crear una cuenta?" 
                 HorizontalAlignment="Center" 
-                MouseLeftButtonDown="lblAccouncreate_MouseLeftButtonDown"
-                Margin="0,409,0,0" 
+                MouseLeftButtonDown="lblAuth_MouseLeftButtonDown"
+                Margin="0,407,0,0" 
                 VerticalAlignment="Top" 
                 AutomationProperties.Name="" 
                 AutomationProperties.HelpText="" 
@@ -162,7 +140,7 @@
                 FontWeight="SemiBold" Width="440" HorizontalContentAlignment="Center"/>
                     <Label 
                 x:Name="lblThemeTitle_Copiar1" 
-                Content="Correo electrónico o nombre de usuario *" 
+                Content="Correo electrónico*" 
                 HorizontalAlignment="Left" 
                 
                 Margin="22,97,0,0" 
@@ -173,7 +151,7 @@
                 FontSize="12" 
                 FontWeight="SemiBold" Width="356" HorizontalContentAlignment="Left"/>
                     <Label 
-                x:Name="lblThemeTitle_Copiar2" 
+                x:Name="lblPassword" 
                 Content="Contraseña *" 
                 HorizontalAlignment="Left" 
                 
@@ -184,11 +162,11 @@
                 Foreground="{DynamicResource FontColor}" 
                 FontSize="12" 
                 FontWeight="SemiBold" Width="356" HorizontalContentAlignment="Left"/>
-                    <Button x:Name="btnTeme" 
-            Content="%btnAuth_Click%"
-            Foreground="{DynamicResource FontColor}"
-            FontSize="14.5"
-            FontWeight="SemiBold" Click="btnAuth_Click" Margin="116,367,116,44">
+                    <Button x:Name="btnAuth" 
+                        Content="%btnAuth_Click%"
+                        Foreground="{DynamicResource FontColor}"
+                        FontSize="14.5"
+                        FontWeight="SemiBold" Margin="116,367,116,44">  
 
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
@@ -215,15 +193,90 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
+                    <Label 
+                        x:Name="lblPasswordRepeat" 
+                        Content="Repetir Contraseña *" 
+                        HorizontalAlignment="Left" 
+                
+                        Margin="22,261,0,0" 
+                        VerticalAlignment="Top" 
+                        AutomationProperties.Name="" 
+                        AutomationProperties.HelpText="" 
+                        Foreground="{DynamicResource FontColor}" 
+                        FontSize="12" 
+                        FontWeight="SemiBold" Width="356" HorizontalContentAlignment="Left"/>
 
                 </Grid>
             </Border>
             <Border Margin="413,253,560,395" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
-                <TextBox Height="19"  TextWrapping="Wrap" Text="n00487753@upn.pe" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+                <TextBox x:Name="txtUserName" 
+                    GotFocus="Text_GotFocus"
+                    LostFocus="Text_LostFocus"
+                    Height="19"  
+                    TextWrapping="Wrap" 
+                    Text="n00487753@upn.pe" 
+                    Tag="n00487753@upn.pe" 
+                    Foreground="Gray" 
+                    VerticalAlignment="Center" 
+                    Background ="Transparent" 
+                    BorderThickness="0" 
+                    Margin="8,0,8,0"/>
             </Border>
-            <Border Margin="413,340,560,309" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
-                <PasswordBox Height="19" Password="hola" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+            <Border x:Name="brdPasssword" Margin="413,340,560,309" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                <PasswordBox x:Name="txtPasssword" 
+                    Height="19" 
+                    Password="hola" 
+                    Tag="hola"
+                    Foreground="Gray" 
+                    VerticalAlignment="Center" 
+                    Background ="Transparent"
+                    GotFocus="Text_GotFocus"
+                    LostFocus="Text_LostFocus"
+                    BorderThickness="0" 
+                    Margin="8,0,8,0"/>
             </Border>
+            <Border x:Name="brdPasswordRepeat" Margin="413,416,560,233" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                <PasswordBox x:Name="txtPasswordRepeat" 
+                    Height="19" 
+                    Password="hola" 
+                    Tag="hola"
+                    Foreground="Gray" 
+                    VerticalAlignment="Center" 
+                    Background ="Transparent"
+                    GotFocus="Text_GotFocus"
+                    LostFocus="Text_LostFocus"
+                    BorderThickness="0" 
+                    Margin="8,0,8,0"/>
+            </Border>
+
+
+            <Button x:Name="btnClose"
+ Background="Transparent"
+ BorderBrush="Transparent"
+ BorderThickness="1"
+ ToolTip="Cerrar aplicación"
+ Padding="0" 
+ Template="{DynamicResource SidebarTemplate}" Click="btnClose_Click" Height="26" Canvas.Left="1198" Width="31" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1214,16,0,0">
+                <Grid Height="62" Width="57">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Path x:Name="IconPath"
+         Data="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"
+
+         StrokeThickness="1.8"
+         StrokeEndLineCap="Round"
+         StrokeStartLineCap="Round"
+
+         HorizontalAlignment="Left"
+         VerticalAlignment="Top" Height="19" Stretch="Fill" Width="20" Margin="4,2,0,0">
+                        <Path.Stroke>
+                            <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
+                        </Path.Stroke>
+                    </Path>
+                </Grid>
+            </Button>
         </Grid>
     </Border>
 

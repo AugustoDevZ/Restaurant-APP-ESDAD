@@ -15,19 +15,13 @@
                           VerticalAlignment="Center"/>
         </Border>
         <ControlTemplate.Triggers>
-
-            <!-- Hover -->
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter TargetName="border" Property="Background" Value="#EAF3FB"/>
                 <Setter TargetName="border" Property="BorderBrush" Value="#EDA189"/>
             </Trigger>
-
-            <!-- Click -->
             <Trigger Property="IsPressed" Value="True">
                 <Setter TargetName="border" Property="Background" Value="#F1CAC1"/>
             </Trigger>
-
-            <!-- Disabled -->
             <Trigger Property="IsEnabled" Value="False">
                 <Setter TargetName="border" Property="Opacity" Value="0.5"/>
             </Trigger>

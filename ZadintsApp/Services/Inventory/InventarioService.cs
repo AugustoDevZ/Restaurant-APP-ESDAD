@@ -17,7 +17,29 @@ namespace App.Services.Inventory
             _listaPlatos.InsertHead(plato);
         }
 
+        public static NodoSimple<Plato> ObtenerPlato(int id)
+        {
+            if(_listaPlatos.Head == null)
+                return null;
 
+            if (id <= 0)
+                return  _listaPlatos.Head;
+
+            NodoSimple<Plato> actual = _listaPlatos.Head;
+            int cotador = 0;
+
+            while (actual != null)
+            {
+                if (cotador == id)
+                    return actual;
+
+                actual = actual.Siguiente;
+                cotador++;
+            }
+
+            return null;
+
+        }
 
         public static bool EliminarPlato(int id)
         {

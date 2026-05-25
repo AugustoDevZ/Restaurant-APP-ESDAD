@@ -60,19 +60,19 @@
 
         <Grid RenderTransformOrigin="0.506,0.455" Margin="8,8,3,8" Cursor="Hand">
 
-            
-            
+
+
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            
+
             <!---=================================================[ TAB ]=============================================================-->
 
             <Button x:Name="btnNews" 
                 Background="Transparent" 
                 BorderBrush="Transparent" 
-                Margin="1101,27,102,584"
+                Margin="1084,26,119,584"
                 Template="{DynamicResource SidebarTemplate}" Click="btnNews_Click"
                 >
 
@@ -116,7 +116,7 @@
                     </EventTrigger>
                 </Button.Triggers>
             </Button>
-                
+
 
             <Grid Margin="1165,18,24,584">
 
@@ -621,14 +621,14 @@ Duration="0:0:0.2"/>
             </StackPanel>
 
 
-            <Button x:Name="btnCloseApp"
+            <Button x:Name="btnCloseSession"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 BorderThickness="1"
-                ToolTip="Cerrar aplicación"
+                ToolTip="Cerrar sesión"
                 Padding="0"
                 Margin="15,593,1189,26" 
-                Template="{DynamicResource SidebarTemplate}" Click="btnCloseApp_Click">
+                Template="{DynamicResource SidebarTemplate}" Click="btnCloseSession_Click">
                 <Grid Height="31" Width="28">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -672,7 +672,7 @@ Duration="0:0:0.2"/>
             </Button>
 
             <!---=================================================[ Title Content ]=============================================================-->
-            
+
 
 
 
@@ -683,12 +683,39 @@ Duration="0:0:0.2"/>
                 HorizontalAlignment="Left" Margin="588,642,0,-2" Cursor=""/>
 
 
-            
-            <Image x:Name="producsr" Margin="-34,-40,1030,498" Source="/Components/Views/logo.png" Stretch="Uniform"/>
+
+            <Image x:Name="producsr" Margin="-34,-40,1030,498" Source="/Resources/logo.png" Stretch="Uniform"/>
 
             <Frame x:Name="frContent"  NavigationUIVisibility="Hidden" Content="Frame" Margin="205,75,10,17" Height="550" Width="1020" Navigated="Frame_Content"/>
-            <Frame x:Name="frBody"  NavigationUIVisibility="Hidden" Content="Frame" Navigated="Frame_Content" Margin="-8,-8,-3,-8"
+            <Frame x:Name="frBody"  NavigationUIVisibility="Hidden" Content="Frame" Navigated="Frame_Content" Margin="-8,-8,0,-8"
 />
+            <Button x:Name="btnClose"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="1"
+                ToolTip="Cerrar aplicación"
+                Padding="0" 
+                Template="{DynamicResource SidebarTemplate}" Click="btnClose_Click" Height="26" Width="31" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1206,6,0,0">
+                <Grid Height="62" Width="57">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Path x:Name="IconPath1"
+                        Data="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"
+
+                        StrokeThickness="1.8"
+                        StrokeEndLineCap="Round"
+                        StrokeStartLineCap="Round"
+
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Height="19" Stretch="Fill" Width="20" Margin="4,2,0,0">
+                        <Path.Stroke>
+                            <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
+                        </Path.Stroke>
+                    </Path>
+                </Grid>
+            </Button>
         </Grid>
     </Border>
 </Window>

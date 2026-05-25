@@ -1,27 +1,23 @@
 ﻿using System.Windows;
-using Zrutas.UI.Views;
 using Zrutas.UI.Views.Content;
-using App.Components.Layouts.Body;
-using App.Services.Database;
 using Zrutas.UI.Views.Frames;
+using App.Config;
+using App.Domain.Emun;
 
 namespace App.Components.Views
 {
-    /// <summary>
-    /// Lógica de interacción para Dashboard.xaml
-    /// </summary>
     public partial class Dashboard : Window
     {
         private bool isRecording = false;
         public Dashboard()
         {
             InitializeComponent();
-            
             frBody.Visibility = Visibility.Collapsed;
+            frContent.Navigate(new Main());
         }
-        // ================================================================
-        // ======================= Sidebar Buttons Content==========================
-        // =================================================================
+        /*-------------------------------------------
+         * Sidebar Buttons Content
+         ------------------------------------------------*/
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
             frContent.Navigate(new Main());
@@ -52,30 +48,35 @@ namespace App.Components.Views
         {
             frContent.Navigate(new Selling());
         }
-        private void btnCloseApp_Click(object sender, RoutedEventArgs e)
+
+        private void btnNews_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        /*----------------------------------
+         Eventos para los btones de cerrar sesión y app
+        ----------------------------------------*/
+
+        private void btnCloseSession_Click(object sender, RoutedEventArgs e)
+        {
+            Auth login = new Auth();
+            Application.Current.MainWindow = login;
+
+            login.Show();
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
 
-
-        // ================================================================
-        // ======================= Oterns options Body ==========================
-        // =================================================================
-
-        private void btnNews_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-        
-
         /*------------------------------------
          * Método del botón Anuncios , se encarga de mostrar las notificaciones a travez del tab 4 al usuario, 
          * se llama cada vez que el usuario hace click en el botón de novedades
          ------------------------------------*/
-        
-
-
         private void Frame_Content(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
 

@@ -23,8 +23,6 @@ namespace Zrutas.UI.Views.Content
         {
             InitializeComponent();
 
-            tbPlatos.Text = $"{AppSetting.AppName}";
-
         }
 
 

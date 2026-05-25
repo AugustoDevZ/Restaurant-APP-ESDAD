@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using App.Config;
+using App.Services.auth;
+using App.Domain.Emun;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using static System.Collections.Specialized.BitVector32;
 
 namespace App.Components.Views
 {
@@ -17,24 +15,146 @@ namespace App.Components.Views
     /// </summary>
     public partial class Auth : Window
     {
+        private bool isLoginMode;
         public Auth()
         {
             InitializeComponent();
+            isLoginMode = true;
+            LoginMode();
         }
 
-        private void lblAccouncreate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        
+
+        private void lblAuth_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Label clickeado");
+            
+            if (!isLoginMode)
+            {
+                LoginMode();
+                return;
+            }
+
+            brdPasswordRepeat.Visibility = Visibility.Visible;
+            lblPasswordRepeat.Visibility = Visibility.Visible;
+            lblAuthMode.Content = "¿Ya tienes una cuenta?"; btnAuth.Content = "Crear Cuenta";
+            lblTitle.Content = "¡Te damos la bienvenida!";
+            lblDescription.Content = "Gracias por unirte a nosotros";
+            btnAuth.Click -= Login_Click;
+            btnAuth.Click += Register_Click;
+            this.KeyDown -= Login_Click;
+            this.KeyDown += (s, args) =>
+            {
+                if (args.Key == Key.Enter)
+                {
+                    Register_Click(s, e);
+                }
+            };
+            isLoginMode = false;
         }
+        
+
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            string? result = AuthService.Login(txtUserName.Text, txtPasssword.Password);
+            if (result != null)
+            {
+                MessageBox.Show(result);
+                return;
+            }
+            ViewDashboard();
+        }
+
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            string? result = AuthService.Register(txtUserName.Text, txtPasssword.Password, txtPasswordRepeat.Password);
+            if (result != null)
+            {
+                MessageBox.Show(result);
+                return;
+            }
+            ViewDashboard();
+        }
+
+        private void ViewDashboard()
+        {
+            Dashboard dashboard = new Dashboard();
+            Application.Current.MainWindow = dashboard;
+            this.Hide();
+            dashboard.Show();
+            this.Close();
+        }
+        private void LoginMode()
+        {
+            brdPasswordRepeat.Visibility = Visibility.Hidden;
+            lblPasswordRepeat.Visibility = Visibility.Hidden;
+            lblAuthMode.Content = "¿Crear una cuenta?";
+            btnAuth.Content = "Iniciar Sesión";
+            lblTitle.Content = "¡Hola de nuevo!";
+            lblDescription.Content = "Nos alegramos de volverte a ver";
+            btnAuth.Click -= Register_Click;
+            btnAuth.Click += Login_Click;
+            this.KeyDown -= Register_Click;
+            this.KeyDown += (s, args) =>
+            {
+                if (args.Key == Key.Enter)
+                {
+                    Login_Click(s, null);
+                }
+            };
+            isLoginMode = true;
+        }
+
+
+        //---------------------------------------------------------------
+        // Métodos para el funcionamiento dde UI :DD
+        //---------------------------------------------------------------
+
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
-
-        private void btnAuth_Click(object sender, RoutedEventArgs e)
+        private void Text_GotFocus(object sender, RoutedEventArgs e)
         {
+            if (sender is TextBox tb)
+            {
+                if (tb.Text == (string)tb.Tag)
+                {
+                    tb.Text = "";
+                    tb.Foreground = System.Windows.Media.Brushes.Black;
+                }
+                return;
+            }
 
+            if (sender is PasswordBox ps) //mijines si  es PasswordBox lo convierte a cast seguro y guarda en variable
+            {
+                if (ps.Password == (string)ps.Tag)
+                {
+                    ps.Password = "";
+                    ps.Foreground = System.Windows.Media.Brushes.Black;
+                }
+            }
         }
+
+        private void Text_LostFocus(object sender, RoutedEventArgs e)  
+        {
+            if (sender is TextBox tb)
+                if (string.IsNullOrWhiteSpace(tb.Text))
+                {
+                    tb.Text = (string)tb.Tag;
+                    tb.Foreground = System.Windows.Media.Brushes.Gray;
+                }
+
+            if (sender is PasswordBox ps)
+                if (string.IsNullOrWhiteSpace(ps.Password))
+                {
+                    ps.Password = (string)ps.Tag;
+                    ps.Foreground = System.Windows.Media.Brushes.Gray;
+                }
+        }
+
+        
     }
 }

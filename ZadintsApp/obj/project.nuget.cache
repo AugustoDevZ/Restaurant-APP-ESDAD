@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NzM/OEZmnB8=",
+  "dgSpecHash": "dbjlmKN97+o=",
   "success": true,
   "projectFilePath": "D:\\proyectos\\App Escritorio WPF C#\\Restaurant-APP\\ZadintsApp\\App.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
     "C:\\Users\\AUGUSTO RODRIGUEZ\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512"
   ],

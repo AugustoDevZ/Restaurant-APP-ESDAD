@@ -113,3 +113,4 @@ D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-w
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App.pdb
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\App.genruntimeconfig.cache
 D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\obj\Debug\net10.0-windows\ref\App.dll
+D:\proyectos\App Escritorio WPF C#\Restaurant-APP\ZadintsApp\bin\Debug\net10.0-windows\BCrypt-Net-Next.dll
