@@ -1,68 +1,74 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
     <Style x:Key="TransparentComboBox" TargetType="ComboBox">
 
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Padding" Value="5"/>
+        <!-- SOLO afecta el control cerrado -->
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#E8440A"/>
+        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Padding" Value="10,5"/>
 
         <Setter Property="Template">
-            <Setter.Value>
 
+            <Setter.Value>
                 <ControlTemplate TargetType="ComboBox">
 
                     <Grid>
 
-                     
-                        <Border Background="Transparent">
+                        <!-- CERRADO -->
+                        <Border x:Name="MainBorder"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"                                
+                                CornerRadius="10"
+                                SnapsToDevicePixels="True">
 
-                            <Grid>
+                            <DockPanel Margin="5">
 
                                 <ContentPresenter
-                                Margin="8,0,30,0"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"/>
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                    VerticalAlignment="Center"
+                                    Margin="5,0,0,0"/>
 
-                         
                                 <ToggleButton
-                                Grid.Column="1"
-                                Focusable="False"
-                                Background="Transparent"
-                                BorderThickness="0"
-                                HorizontalAlignment="Right"
-                                Width="25">
+                                    DockPanel.Dock="Right"
+                                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ClickMode="Press"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalAlignment="Right"
+                                    Width="25">
 
-                                    <Path
-                                    Width="10"
-                                    Height="6"
-                                    Stretch="Fill"
-                                    Fill="{DynamicResource BackgroundMargin}"
-                                    Data="M 0 0 L 10 0 L 5 5 Z"/>
-
+                                    <Path Data="M 0 0 L 10 0 L 5 6 Z"
+                                          Fill="Gray"
+                                          Width="10"
+                                          
+                                          Height="6"/>
                                 </ToggleButton>
 
-                            </Grid>
+                            </DockPanel>
 
                         </Border>
 
-                        <!-- Popup -->
-                        <Popup
-                        Name="Popup"
-                        Placement="Bottom"
-                        IsOpen="{TemplateBinding IsDropDownOpen}"
-                        AllowsTransparency="True"
-                        Focusable="False"
-                        PopupAnimation="Fade">
+                        <!-- DESPLEGABLE (INDEPENDIENTE) -->
+                        <Popup x:Name="Popup"
+                               Placement="Bottom"
+                               IsOpen="{TemplateBinding IsDropDownOpen}"
+                               AllowsTransparency="True"
+                               Focusable="False"
+                               PopupAnimation="Fade">
 
-                            <Border
-                            Background="#1E1E1E"
-                            BorderBrush="{DynamicResource BackgroundMargin}"
-                            BorderThickness="2"
-                            CornerRadius="10">
+                            <Border Background="White"
+                                    BorderBrush="#DDD"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    MinWidth="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}">
 
-                                <ScrollViewer Margin="2">
+                                <ScrollViewer>
                                     <StackPanel IsItemsHost="True"/>
                                 </ScrollViewer>
 
@@ -73,9 +79,10 @@
                     </Grid>
 
                 </ControlTemplate>
-
             </Setter.Value>
+
         </Setter>
 
     </Style>
+
 </ResourceDictionary>

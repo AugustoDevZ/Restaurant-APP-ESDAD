@@ -1,43 +1,57 @@
 ﻿using App.Config;
-using App.Services.ListGeneral;
+using App.Services.ESDAD;
 using System;
 using App.Domain.Entities;
 using System.Data.SQLite;
 using System.Text;
 using App.Domain.DataStructures.Nodo;
+using System.Windows;
 
 namespace App.Services.Database
 {
     internal class DatabaseService
     {
-        public static int DatabaseSet(string command, ListaSimple<ModelSqlParameter> list)
+        public static int DatabaseAction(string command, ListaSimple<ParametrosSQL> Parametros)
         {
-            using (var conn = new SQLiteConnection(AppSetting.connectionString))
+            try
             {
-                conn.Open();
-
-                using (var cmd = new SQLiteCommand(command, conn))
+                using (var conn = new SQLiteConnection(AppSetting.connectionString))
                 {
-                    NodoSimple<ModelSqlParameter> current = list.Head;
+                    conn.Open();
 
-                    while (current != null)
+                    using (var cmd = new SQLiteCommand(command, conn))
                     {
-                        cmd.Parameters.AddWithValue(
-                            current.Dato.Name,
-                            current.Dato.Value
-                        );
+                        NodoSimple<ParametrosSQL> current = Parametros.Cabeza;
 
-                        current = current.Siguiente;
+                        while (current != null)
+                        {
+                            cmd.Parameters.AddWithValue(
+                                current.Dato.Name,
+                                current.Dato.Value
+                            );
+
+                            current = current.Siguiente;
+                        }
+
+
+
+                        return cmd.ExecuteNonQuery();
+
+
                     }
-
-                    return cmd.ExecuteNonQuery();
-
-
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al ejecutar la consulta: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                throw;
             }
         }
 
-        public static string? DatabaseGiveDate(string command, ModelSqlParameter modelParameter)
+
+        
+
+        public static string? DatabaseGiveDate(string command, ParametrosSQL parametros)
         {
             using (var conn = new SQLiteConnection(AppSetting.connectionString))
             {
@@ -45,7 +59,7 @@ namespace App.Services.Database
                 using (var cmd = new SQLiteCommand(command, conn))
                 {
 
-                    cmd.Parameters.AddWithValue(modelParameter.Name, modelParameter.Value);
+                    cmd.Parameters.AddWithValue(parametros.Name, parametros.Value);
 
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
@@ -64,14 +78,15 @@ namespace App.Services.Database
             }
         }
 
-        public static int DatabaseSearch(string command, ListaSimple<ModelSqlParameter> list)
+        
+        public static int DatabaseSearch(string command, ListaSimple<ParametrosSQL> parametros)
         {
             using (var conn = new SQLiteConnection(AppSetting.connectionString))
             {
                 conn.Open();
                 using (var cmd = new SQLiteCommand(command, conn))
                 {
-                    NodoSimple<ModelSqlParameter> current = list.Head;
+                    NodoSimple<ParametrosSQL> current = parametros.Cabeza;
                     while (current != null)
                     {
                         cmd.Parameters.AddWithValue(

@@ -165,7 +165,7 @@ namespace App.Components.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/App;V1.0.0.0;component/components/views/auth.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/App;component/components/views/auth.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Components\Views\Auth.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

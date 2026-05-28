@@ -19,9 +19,9 @@ namespace Zrutas.UI.Views.Content
     /// <summary>
     /// Lógica de interacción para Selling.xaml
     /// </summary>
-    public partial class Selling : Page
+    public partial class VentasPage : Page
     { 
-        public Selling()
+        public VentasPage()
         {
             InitializeComponent();
             CargarProductos();

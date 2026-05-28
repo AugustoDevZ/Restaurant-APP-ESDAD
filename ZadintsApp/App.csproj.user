@@ -5,28 +5,22 @@
     <Compile Update="Components\Layouts\Body\RolesGui.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Components\Layouts\Content\Database.xaml.cs">
+    <Compile Update="Components\Layouts\Content\InventarioPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Components\Layouts\Content\Inventory.xaml.cs">
+    <Compile Update="Components\Layouts\Content\MenuPrincipalPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Components\Layouts\Content\Main.xaml.cs">
+    <Compile Update="Components\Layouts\Content\ClientesPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Components\Layouts\Content\Products.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Components\Layouts\Content\Selling.xaml.cs">
+    <Compile Update="Components\Layouts\Content\VentasPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Components\Views\Auth.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Components\Views\Dashboard.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Components\Layouts\Body\ThemeGui.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

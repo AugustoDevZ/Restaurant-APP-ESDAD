@@ -1,8 +1,9 @@
-﻿using System.Windows;
+﻿using App.Config;
+using App.Domain.Emun;
+using App.Helpers;
+using System.Windows;
 using Zrutas.UI.Views.Content;
 using Zrutas.UI.Views.Frames;
-using App.Config;
-using App.Domain.Emun;
 
 namespace App.Components.Views
 {
@@ -13,14 +14,15 @@ namespace App.Components.Views
         {
             InitializeComponent();
             frBody.Visibility = Visibility.Collapsed;
-            frContent.Navigate(new Main());
+            frContent.Navigate(new MenuPrincipalPage());
+            imgAvatar.Source = ObtenerImagen.ImagenDesdeBase64(AppSetting.UsuarioPerfil.Image);
         }
         /*-------------------------------------------
          * Sidebar Buttons Content
          ------------------------------------------------*/
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
-            frContent.Navigate(new Main());
+            frContent.Navigate(new MenuPrincipalPage());
         }
 
         private void btnProducts_Click(object sender, RoutedEventArgs e)
@@ -37,16 +39,9 @@ namespace App.Components.Views
             frContent.Navigate(new Setting());
         }
 
-        
-
-        private void btnDatabase_Click(object sender, RoutedEventArgs e)
-        {
-            frContent.Navigate(new Database());
-        }
-
         private void btnSelling_Click(object sender, RoutedEventArgs e)
         {
-            frContent.Navigate(new Selling());
+            frContent.Navigate(new VentasPage());
         }
 
         private void btnNews_Click(object sender, RoutedEventArgs e)

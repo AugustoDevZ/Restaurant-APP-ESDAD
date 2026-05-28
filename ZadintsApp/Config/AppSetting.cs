@@ -21,5 +21,11 @@ namespace App.Config
         ----------------------------------------*/
         public static AuthStatus Session { get; set; } = AuthStatus.Closed;
 
+        /*----------------------------------
+       * Campos para guardar datos UI
+       ----------------------------------------*/
+        public static DatosMenuPrincipal datosMenuPrincipal = new DatosMenuPrincipal();
+
+        public static Usuario UsuarioPerfil = new Usuario();
     }
 }

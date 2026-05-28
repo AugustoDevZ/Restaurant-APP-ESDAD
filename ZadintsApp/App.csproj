@@ -27,6 +27,7 @@
   <ItemGroup>
     <Folder Include="Database\" />
     <Folder Include="Services\Inventory\" />
+    <Folder Include="Services\Usuario\" />
   </ItemGroup>
 
   <ItemGroup>

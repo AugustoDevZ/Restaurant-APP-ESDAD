@@ -1,7 +1,8 @@
-﻿using App.Domain.Entities;
+﻿using App.Config;
+using App.Domain.Entities;
 using App.Helpers;
 using App.Services.Database;
-using App.Services.ListGeneral;
+using App.Services.ESDAD;
 using System.IO.Packaging;
 using System.Reflection.Metadata;
 
@@ -13,7 +14,7 @@ namespace App.Services.auth
         {
             
             
-            if (string.IsNullOrEmpty(userEmail) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrWhiteSpace(userEmail) || string.IsNullOrWhiteSpace(password))
             {
                 return "Ingresa todos los datos";
             }
@@ -27,7 +28,7 @@ namespace App.Services.auth
             if (AuthHelpers.IsValidEmail(userEmail))
             {
                 string? aswer = ReturnPassword(userEmail);
-                if (aswer == null) return "El correo electrónico no se pudo encontrar";
+                if (aswer == null) return "El usuario no está registrado";
 
                 if(!EncryptString.Verify(password, aswer))
                 {
@@ -35,6 +36,7 @@ namespace App.Services.auth
                 }                
             }
 
+            AppSetting.UsuarioPerfil.Correo = userEmail;
             return null;
         }
 
@@ -42,7 +44,7 @@ namespace App.Services.auth
         {
             string command = $"SELECT UserPassword FROM Users WHERE UserMail = @UserMail";
 
-            ModelSqlParameter sqlParam = new ModelSqlParameter($"@UserMail", emailOrUsername);
+            ParametrosSQL sqlParam = new ParametrosSQL  ($"@UserMail", emailOrUsername);
 
             string? response = DatabaseService.DatabaseGiveDate(command, sqlParam);
             if (response == null) return null;
@@ -54,8 +56,8 @@ namespace App.Services.auth
         {
             string command = "SELECT COUNT(*) FROM Users WHERE UserMail = @UserMail";
 
-            ListaSimple<ModelSqlParameter> sqlParam = new ListaSimple<ModelSqlParameter>();
-            sqlParam.InsertLast(new ModelSqlParameter("@UserMail", email));
+            ListaSimple<ParametrosSQL> sqlParam = new ListaSimple<ParametrosSQL>();
+            sqlParam.InsertarCola(new ParametrosSQL("@UserMail", email));
 
             int response = DatabaseService.DatabaseSearch(command, sqlParam);
             if (response > 0) return true;
@@ -70,7 +72,7 @@ namespace App.Services.auth
         {
 
 
-            if (string.IsNullOrEmpty(userEmail) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+            if (string.IsNullOrWhiteSpace(userEmail) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
             {
                 return "Ingresa todos los datos";
             }
@@ -107,15 +109,18 @@ namespace App.Services.auth
 
             string command = "INSERT INTO Users (UserName ,UserMail, UserImage, UserPassword) VALUES (@UserName ,@UserMail, @UserImage, @UserPassword)";
 ;
-            ListaSimple<ModelSqlParameter> sqlParam = new ListaSimple<ModelSqlParameter>();
-            sqlParam.InsertLast(new ModelSqlParameter("@UserName", "User"));
-            sqlParam.InsertLast(new ModelSqlParameter("@UserMail", userEmail));
-            sqlParam.InsertLast(new ModelSqlParameter("@UserImage", ""));
-            sqlParam.InsertLast(new ModelSqlParameter("@UserPassword", passwordEncrypted));
+            ListaSimple<ParametrosSQL> sqlParam = new ListaSimple<ParametrosSQL>();
+            sqlParam.InsertarCola(new ParametrosSQL("@UserName", "User"));
+            sqlParam.InsertarCola(new ParametrosSQL("@UserMail", userEmail));
+            sqlParam.InsertarCola(new ParametrosSQL("@UserImage", ""));
+            sqlParam.InsertarCola(new ParametrosSQL("@UserPassword", passwordEncrypted));
 
-            int response = DatabaseService.DatabaseSet(command, sqlParam);
+            int response = DatabaseService.DatabaseAction(command, sqlParam);
 
-            if (response > 0) return null;
+            if (response > 0){
+                AppSetting.UsuarioPerfil.Correo = userEmail;
+                return null;
+            }
             else return "Error al registrar el usuario";
         }
 

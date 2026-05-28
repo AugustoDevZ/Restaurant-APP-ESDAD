@@ -1,7 +1,9 @@
-﻿using App.Domain.Entities;
-using System.Windows.Controls;
+﻿using App.Config;
 using App.Domain.DataStructures.Nodo;
-using App.Services.ListGeneral;
+using App.Domain.Entities;
+using App.Services.ESDAD;
+using System.Windows.Controls;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace App.Services.Inventory
 {
@@ -14,18 +16,20 @@ namespace App.Services.Inventory
         public static void AgregarPlato(string nombre, string descripcion, decimal precio)
         {
             Plato plato = new Plato(_contadorId++, nombre, descripcion, precio);
-            _listaPlatos.InsertHead(plato);
+            _listaPlatos.InsertarCabeza(plato);
+            
+
         }
 
         public static NodoSimple<Plato> ObtenerPlato(int id)
         {
-            if(_listaPlatos.Head == null)
+            if(_listaPlatos.Cabeza == null)
                 return null;
 
             if (id <= 0)
-                return  _listaPlatos.Head;
+                return  _listaPlatos.Cabeza;
 
-            NodoSimple<Plato> actual = _listaPlatos.Head;
+            NodoSimple<Plato> actual = _listaPlatos.Cabeza;
             int cotador = 0;
 
             while (actual != null)
@@ -43,21 +47,25 @@ namespace App.Services.Inventory
 
         public static bool EliminarPlato(int id)
         {
+            int ventasHoy = AppSetting.datosMenuPrincipal.VentasHoy;
+            if (ventasHoy > 0)
+                AppSetting.datosMenuPrincipal.VentasHoy--;
+
             var predicate = new Predicate<Plato>(p => p.Id == id);
-            return _listaPlatos.Delete(predicate);
+            return _listaPlatos.Eliminar(predicate);
         }
 
         public static void CargarLista(ListBox lista)
         {
             lista.Items.Clear();
 
-            if (_listaPlatos.Head == null)
+            if (_listaPlatos.Cabeza == null)
             {
                 lista.Items.Add("No hay platos registrados");
                 return;
             }
 
-            NodoSimple<Plato> actual = _listaPlatos.Head;
+            NodoSimple<Plato> actual = _listaPlatos.Cabeza;
             while (actual != null)
             {
                 lista.Items.Add(actual.Dato);
@@ -68,7 +76,7 @@ namespace App.Services.Inventory
         public static int ContarPlatos()
         {
             int count = 0;
-            NodoSimple<Plato> actual = _listaPlatos.Head;
+            NodoSimple<Plato> actual = _listaPlatos.Cabeza;
             while (actual != null)
             {
                 count++;
