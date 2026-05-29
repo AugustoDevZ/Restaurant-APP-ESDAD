@@ -1,4 +1,5 @@
-﻿using App.Domain.Entities;
+﻿using App.Config;
+using App.Domain.Entities;
 using App.Services.Inventory;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,8 +15,28 @@ namespace Zrutas.UI.Views.Content
         {
             InitializeComponent();
             RefrescarLista();
+            CargarBotones();
         }
+        private void CargarBotones()
+        {
+            var RolActual = AppSetting.UsuarioPerfil.RolActual;
+            if (RolActual == null) return;
 
+            if (!RolActual.Permisos.EliminarProductos)
+            {
+                btnEliminarProductos.IsEnabled = false;
+            }
+
+            if (!RolActual.Permisos.AgregarProductos)
+            {
+                btnAgregarProductos.IsEnabled = false;
+            }
+
+            if (!RolActual.Permisos.EditarProductos)
+            {
+                btnEditarPRoducto.IsEnabled = false;
+            }
+        }
         private void RefrescarLista()
         {
             InventarioService.CargarLista(LstPlatos);

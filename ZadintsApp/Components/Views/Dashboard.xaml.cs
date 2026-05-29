@@ -1,9 +1,12 @@
 ﻿using App.Config;
-using App.Domain.Emun;
+using App.Services.Roles;
 using App.Helpers;
 using System.Windows;
 using Zrutas.UI.Views.Content;
 using Zrutas.UI.Views.Frames;
+using App.Domain.DataStructures.Nodo;
+using App.Domain.Entities;
+using System.Windows.Controls;
 
 namespace App.Components.Views
 {
@@ -15,7 +18,7 @@ namespace App.Components.Views
             InitializeComponent();
             frBody.Visibility = Visibility.Collapsed;
             frContent.Navigate(new MenuPrincipalPage());
-            imgAvatar.Source = ObtenerImagen.ImagenDesdeBase64(AppSetting.UsuarioPerfil.Image);
+            imgAvatar.Source = Imagen.ObtenerDesdeBase64(AppSetting.UsuarioPerfil.Image);
         }
         /*-------------------------------------------
          * Sidebar Buttons Content
@@ -25,7 +28,7 @@ namespace App.Components.Views
             frContent.Navigate(new MenuPrincipalPage());
         }
 
-        private void btnProducts_Click(object sender, RoutedEventArgs e)
+        private void btnClientes_Click(object sender, RoutedEventArgs e)
         {
             frContent.Navigate(new Products());
         }
@@ -39,7 +42,7 @@ namespace App.Components.Views
             frContent.Navigate(new Setting());
         }
 
-        private void btnSelling_Click(object sender, RoutedEventArgs e)
+        private void btnVender_Click(object sender, RoutedEventArgs e)
         {
             frContent.Navigate(new VentasPage());
         }
@@ -47,6 +50,42 @@ namespace App.Components.Views
         private void btnNews_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        /*----------------------------------
+         Eventos para los roles
+        ----------------------------------------*/
+
+        public void MostrarBotonesSegunPermisos()
+        {
+            var Roles = AppSetting.UsuarioPerfil.RolActual;
+
+            if (Roles == null)
+            {
+                btnClientes.IsEnabled = true;
+                btnVender.IsEnabled = true;
+                return;
+            }
+
+            
+            var permisos = Roles.Permisos;
+            CargarBotones(permisos);
+            
+        }
+
+        private void CargarBotones(Permisos permisos)
+        {
+            IsEnabledButtons(btnVender, permisos.VenderProductos);
+            IsEnabledButtons(btnClientes, permisos.VerClientes);
+        }
+
+        private void IsEnabledButtons(Button button, bool permiso)
+        {
+            if (!permiso)
+            {
+                button.IsEnabled = false;                
+                return;
+            }
+            button.IsEnabled = true;
         }
 
         /*----------------------------------
@@ -76,5 +115,6 @@ namespace App.Components.Views
         {
 
         }
+
     }
 }

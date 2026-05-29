@@ -1,18 +1,8 @@
-﻿using App.Domain.DataStructures.Nodo;
-using App.Domain.Entities;
-using App.Services.Inventory;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using App.Domain.Entities;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Zrutas.UI.Views.Content
 {
@@ -27,6 +17,8 @@ namespace Zrutas.UI.Views.Content
             CargarProductos();
         }
 
+
+       
         private void CargarProductos()
         {
            /*
@@ -95,6 +87,11 @@ namespace Zrutas.UI.Views.Content
         private void btnPagar_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnVender_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

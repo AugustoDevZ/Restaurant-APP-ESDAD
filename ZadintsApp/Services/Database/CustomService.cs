@@ -10,16 +10,43 @@ namespace App.Services.Database
 {
     public class CustomService
     {
-        public static ListaSimple<Rol> ObtenerTodosLosRoles()
+        public static string ObtenerImagenUsuario(string correo)
+        {
+            using (var conn = new SQLiteConnection(AppSetting.connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT UserImage FROM Users WHERE UserMail = @UserMail";
+
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserMail", correo);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return reader["UserImage"].ToString();
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public static ListaSimple<Rol> ObtenerTodosLosRoles(string correo)
         {
             using (var conn = new SQLiteConnection(AppSetting.connectionString))
             {
                 ListaSimple<Rol> respuestaRoles = new ListaSimple<Rol>();
 
                 conn.Open();
-                string command = "SELECT * FROM Roles";
+                string command = "SELECT * FROM Roles WHERE UserMail = @UserMail";
                 using (var cmd = new SQLiteCommand(command, conn))
                 {
+                    cmd.Parameters.AddWithValue("@UserMail", correo);
+
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -32,8 +59,8 @@ namespace App.Services.Database
                                 color: Convert.ToInt32(reader["Color"]),
                                 descripcion: reader["Descripcion"].ToString(),
                                 permisosId: _permisosId,
-                                permisos: ObtenerPermisos(conn, _permisosId)
-
+                                permisos: ObtenerPermisos(conn, _permisosId),
+                                correo: reader["UserMail"].ToString()
                             );
                             respuestaRoles.InsertarCabeza(_rol);
                         }
@@ -57,11 +84,11 @@ namespace App.Services.Database
                     if (reader.Read())
                     {
                         return new Permisos(
-                            venderProductos: Convert.ToInt32(reader["VenderProductos"]) == 1,
-                            eliminarProductos: Convert.ToInt32(reader["EliminarProductos"]) == 1,
-                            agregarProductos: Convert.ToInt32(reader["AgregarProductos"]) == 1,
-                            editarProductos: Convert.ToInt32(reader["EditarProductos"]) == 1,
-                            verClientes: Convert.ToInt32(reader["VerClientes"]) == 1
+                            venderProductos: Convert.ToBoolean(reader["VenderProductos"]) == true,
+                            eliminarProductos: Convert.ToBoolean(reader["EliminarProductos"]) == true,
+                            agregarProductos: Convert.ToBoolean(reader["AgregarProductos"]) == true,
+                            editarProductos: Convert.ToBoolean(reader["EditarProductos"]) == true,
+                            verClientes: Convert.ToBoolean(reader["VerClientes"]) == true
                         );
                     }
                 }

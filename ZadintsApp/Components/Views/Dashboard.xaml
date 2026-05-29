@@ -173,7 +173,7 @@
 
                     <!-- Estadísticas -->
                     <Button 
-                        x:Name="btnHistorial1" 
+                        x:Name="btnVender" 
                         Background="Transparent" 
                         BorderBrush="Transparent" 
                         BorderThickness="1"
@@ -182,7 +182,7 @@
                         Height="45" 
                         Margin="0,5,0,5" 
      
-                        Template="{DynamicResource SidebarTemplate}" Click="btnSelling_Click" Width="107">
+                        Template="{DynamicResource SidebarTemplate}" Click="btnVender_Click" Width="107">
 
                         <Button.Triggers>
                             <EventTrigger RoutedEvent="UIElement.MouseEnter">
@@ -337,7 +337,7 @@
 
                 <!-- Estadísticas -->
                 <Button 
-                    x:Name="btnHistorial" 
+                    x:Name="btnClientes" 
                     Background="Transparent" 
                     BorderBrush="Transparent" 
                     BorderThickness="1"
@@ -346,7 +346,7 @@
                     Height="45" 
                     Margin="0,5,0,5" 
      
-                    Template="{DynamicResource SidebarTemplate}" Click="btnProducts_Click" Width="184">
+                    Template="{DynamicResource SidebarTemplate}" Click="btnClientes_Click" Width="184">
 
                     <Grid Height="23" Width="130">
                         <Grid.ColumnDefinitions>

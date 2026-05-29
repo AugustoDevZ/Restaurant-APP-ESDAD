@@ -192,6 +192,17 @@
             </ComboBox>
 
         </Border>
+        <Label 
+            x:Name="lblTitleGlobal" 
+            Content="Configuración" 
+            HorizontalAlignment="Left" 
+            Margin="23,0,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="25" 
+            FontWeight="Bold" Height="43" Width="131"/>
 
     </Grid>
 </Page>

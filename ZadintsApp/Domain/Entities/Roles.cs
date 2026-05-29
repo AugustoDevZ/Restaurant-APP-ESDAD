@@ -10,18 +10,20 @@ namespace App.Domain.Entities
     {
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-
         public string permisosId { get; set; }
         public Permisos Permisos { get; set; }
         public int Color { get; set; }
 
-        public Rol(string nombre, int color, string descripcion, Permisos permisos, string permisosId   )
+        public string Correo { get; set; }
+
+        public Rol(string nombre, int color, string descripcion, Permisos permisos, string permisosId , string correo  )
         {
             this.Nombre = nombre;
             this.Descripcion = descripcion;
             this.Color = color;
             this.Permisos = permisos;
             this.permisosId = permisosId;
+            this.Correo = correo;
         }
 
         public override string ToString()

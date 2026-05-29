@@ -20,57 +20,33 @@
         <Border Grid.Column="0"
             Background="#FAFAFA"
             CornerRadius="20"
-            Margin="0,0,5,73"
+            Margin="0,64,5,0"
                 Effect="{DynamicResource ShadowStyle2}"
             Padding="18">
 
-            <Grid>
+            <ListBox x:Name="lstProductosAVender"
+                Background="#F9F9F9"
+                Margin="-4,42,-4,0"
+                BorderBrush="#EEEEEE"
+                BorderThickness="1"                         
+                Padding="8" Height="301" VerticalAlignment="Top">
 
-                <Grid.RowDefinitions>
-
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-
-                </Grid.RowDefinitions>
-
-                <DataGrid x:Name="dgCarrito"
-                      Grid.Row="0"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      HeadersVisibility="Column"
-                      BorderThickness="0"
-                      Background="Transparent"
-                      RowBackground="White"
-                      AlternatingRowBackground="#F3F3F3"
-                      FontSize="17"
-                      RowHeight="45" Grid.RowSpan="3">
-
-                    <DataGrid.Columns>
-
-                        <DataGridTextColumn Header="Producto"
-                                        Binding="{Binding Nombre}"
-                                        Width="*"/>
-
-                        <DataGridTextColumn Header="Cantidad"
-                                        Binding="{Binding Cantidad}"
-                                        Width="90"/>
-
-                        <DataGridTextColumn Header="Precio"
-                                        Binding="{Binding Precio}"
-                                        Width="90"/>
-
-                        <DataGridTextColumn Header="Total"
-                                        Binding="{Binding Total}"
-                                        Width="90"/>
-
-                    </DataGrid.Columns>
-
-                </DataGrid>
-
-
-
-            </Grid>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Padding" Value="16,12"/>
+                        <Setter Property="Margin" Value="0,4"/>
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Foreground" Value="#222222"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#E8440A"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
 
         </Border>
 
@@ -88,23 +64,9 @@ Effect="{DynamicResource ShadowStyle2}"
                     <RowDefinition Height="*"/>
 
                 </Grid.RowDefinitions>
-                
-                <ComboBox x:Name="cbFiltro"
-                      Width="280"
-                      Height="45"
-                      FontSize="18"
-                      SelectedIndex="0" Margin="253,0,0,0">
-                        
-                    <ComboBoxItem Content="Todos los productos"/>
-                    <ComboBoxItem Content="Platos"/>
-                    <ComboBoxItem Content="Gaseosas"/>
-                    <ComboBoxItem Content="Jugos"/>
-                    <ComboBoxItem Content="Tragos"/>
 
-                </ComboBox>
-
-                <ScrollViewer Grid.Row="1"
-                          Margin="0,20,0,0"
+                <ScrollViewer x:Name="scwProductos" Grid.Row="1"
+                          Margin="0,74,0,0"
                           VerticalScrollBarVisibility="Auto">
 
                     <WrapPanel x:Name="wpProductos"/>
@@ -117,30 +79,136 @@ Effect="{DynamicResource ShadowStyle2}"
         <StackPanel
          Orientation="Horizontal"
          HorizontalAlignment="Right"
-         Margin="0,478,307,18">
+         Margin="0,427,23,69">
+
             <TextBlock Text="TOTAL: "
             FontSize="14"
              Foreground="{DynamicResource FontColor}"
             FontWeight="Bold"/>
 
-            <TextBlock x:Name="txtTotal"
+            <TextBlock x:Name="lblTotalPrecio"
             Text="S/ 0.00"
             FontSize="14"
              Foreground="{DynamicResource FontColor}"
             FontWeight="Bold"/>
 
         </StackPanel>
-        <Button x:Name="btnPagar"
-                    Content="Pagar Compra"
-                    Background="#EA6233"
+        <Button x:Name="btnVender"
+                    Content="Vender"
+                    Background="#A0A532"
                     Foreground="White"
-                    Width="140"
+                    Width="99"
                     Height="40"
                     FontSize="14.5"
                     FontWeight="SemiBold" 
                     Template="{DynamicResource ButtonTwo}"
                     HorizontalAlignment="Right"
-                    Margin="0,470,10,10" Click="btnPagar_Click" />
+                    Margin="0,470,20,10" Click="btnVender_Click" />
+        <Label 
+            x:Name="lblTitleGlobal" 
+            Content="Menu de ventas" 
+            HorizontalAlignment="Left" 
+            Margin="23,0,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="25" 
+            FontWeight="Bold" Height="43" Width="221"/>
+        <Label 
+            x:Name="lblThemeTitle_Copiar" 
+            Content="Ingresa algo para buscar" 
+            HorizontalAlignment="Left" 
+                
+            Margin="31,14,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="15" 
+            FontWeight="SemiBold" Width="230" HorizontalContentAlignment="Left" Grid.Column="1"/>
+        <Border Margin="31,44,220,445" BorderBrush="#E8440A" BorderThickness="0,0,0,2" CornerRadius="12" Background="White" Grid.Column="1">
+            <TextBox x:Name="txtPalabraABuscar"  Height="19"  TextWrapping="Wrap" Text="🛡️ Admin" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+        </Border>
+        <Button x:Name="btnBuscarProducto"
+            Content="Crear Rol"
+            Background="#EA6233"
+            Foreground="White"
+            Width="135"
+            FontSize="14.5"
+            FontWeight="SemiBold" 
+            Template="{DynamicResource ButtonTwo}"
+            HorizontalAlignment="Right"
+            Margin="0,44,71,445" Grid.Column="1" />
+        <Button x:Name="btnBuscarInfo"
+            Content="❓"
+            Background="#EA6233"
+            Foreground="White"
+            Width="25"
+            FontSize="14.5"
+            FontWeight="SemiBold" 
+            Template="{DynamicResource ButtonTwo}"
+            HorizontalAlignment="Right"
+            Margin="0,46,34,448" Grid.Column="1" />
+        <Label 
+            x:Name="lblThemeTitle_Copiar1" 
+            Content="Productos seleccionados" 
+            HorizontalAlignment="Left" 
+                
+            Margin="14,64,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="15" 
+            FontWeight="SemiBold" Width="230" HorizontalContentAlignment="Left"/>
+        <Button x:Name="btnEliminarTodo"
+            Content="Cancelar todo"
+            Background="#FC0E32"
+            Foreground="White"
+            Width="120"
+            Height="40"
+            FontSize="14.5"
+            FontWeight="SemiBold" 
+            Template="{DynamicResource ButtonTwo}"
+            HorizontalAlignment="Right"
+            Margin="0,470,124,10" />
+        <TextBlock 
+            x:Name="lblThemeTitle_Copiar7" 
+            TextWrapping="Wrap"
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="14" 
+            FontWeight="Light" Margin="19,99,33,395"><Run Language="es-pe" Text="                "/><Run Text="Producto   "/><Run Language="es-pe" Text="          "/><Run Text=" | "/><Run Language="es-pe" Text="    Cantidad    |        Precio   "/></TextBlock>
+        <StackPanel
+            Orientation="Horizontal"
+            HorizontalAlignment="Right"
+            Margin="0,427,308,69">
+
+            <TextBlock
+                FontSize="14"
+                Foreground="{DynamicResource FontColor}"
+                FontWeight="Bold"><Run Language="es-pe" Text="Productos"/><Run Text=": "/></TextBlock>
+
+            <TextBlock x:Name="lblTotalProductos"
+                Text="0.0"
+                FontSize="14"
+                Foreground="{DynamicResource FontColor}"
+                FontWeight="Bold"/>
+
+        </StackPanel>
+        <Button x:Name="btnEliminarSeleccionado"
+            Content="Eliminar Seleccionado"
+            Background="#EA6233"
+            Foreground="White"
+            Width="158"
+            Height="40"
+            FontSize="14.5"
+            FontWeight="SemiBold" 
+            Template="{DynamicResource ButtonTwo}"
+            HorizontalAlignment="Right"
+            Margin="0,470,249,10" Click="btnPagar_Click" />
 
     </Grid>
 </Page>

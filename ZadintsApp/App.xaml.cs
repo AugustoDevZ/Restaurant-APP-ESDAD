@@ -21,7 +21,7 @@ namespace ZadintsApp
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            RolService.CargarRoles();
+           
         }
         
     }

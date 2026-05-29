@@ -4,9 +4,9 @@ using System.Windows.Media.Imaging;
 
 namespace App.Helpers
 {
-    public class ObtenerImagen
+    public class Imagen
     {
-        public static BitmapImage ImagenDesdeBase64(string base64)
+        public static BitmapImage ObtenerDesdeBase64(string base64)
         {
             byte[] bytes = Convert.FromBase64String(base64);
 
@@ -22,7 +22,7 @@ namespace App.Helpers
             }
         }
 
-        public static string ImagenABase64(string rutaImagen)
+        public static string ConvertirABase64(string rutaImagen)
         {
             byte[] bytes = File.ReadAllBytes(rutaImagen);
             return Convert.ToBase64String(bytes);

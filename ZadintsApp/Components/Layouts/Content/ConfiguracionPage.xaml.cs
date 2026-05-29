@@ -4,12 +4,12 @@ using App.Config;
 using App.Domain.DataStructures.Nodo;
 using App.Domain.Entities;
 using App.Helpers;
+using App.Services.PerfilUsuario;
 using App.Services.Roles;
 using Microsoft.Win32;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media.Imaging;
 
 namespace Zrutas.UI.Views.Frames
 {
@@ -26,11 +26,12 @@ namespace Zrutas.UI.Views.Frames
             InitializeComponent();
             CargarImagen();
             CargarDatos();
+            ActualizarRolLabel();
         }
 
         private void CargarImagen()
         {
-            var imagen = ObtenerImagen.ImagenDesdeBase64(AppSetting.UsuarioPerfil.Image);
+            var imagen = Imagen.ObtenerDesdeBase64(AppSetting.UsuarioPerfil.Image);
             imgPerfil.Source = imagen;
             mainWindow.imgAvatar.Source = imagen;
         }
@@ -38,6 +39,7 @@ namespace Zrutas.UI.Views.Frames
         {
             NodoSimple<Rol> actual = RolService._role.Cabeza;
             cbxCambiarRol.Items.Clear();
+            cbxCambiarRol.Items.Add("[🛡️ Admin ]");
             while (actual != null)
             {
                 cbxCambiarRol.Items.Add(actual.Dato.Nombre);
@@ -52,6 +54,19 @@ namespace Zrutas.UI.Views.Frames
             mainWindow.frBody.Visibility = Visibility.Visible;            
         }
 
+        private void ActualizarRolLabel()
+        {
+            var rolActual = AppSetting.UsuarioPerfil.RolActual;
+
+            if (rolActual == null)
+            {
+                tbxRolActual.Text = "[🛡️ Admin ]";
+                return;
+            }
+
+            tbxRolActual.Text = rolActual.Nombre;
+        }
+
         private void btnImageCambiar_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
@@ -62,11 +77,8 @@ namespace Zrutas.UI.Views.Frames
             if (openFile.ShowDialog() == true)
             {
                 string ruta = openFile.FileName;
-                string base64 = ObtenerImagen.ImagenABase64(ruta);
-                AppSetting.UsuarioPerfil.Image = base64;
+                ImagenService.GuardarImagenPerfilUsuario(ruta);
                 CargarImagen();
-
-                //registrar imagen en db
             }
         }
 
@@ -78,8 +90,34 @@ namespace Zrutas.UI.Views.Frames
         private void cbxCambiarRol_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
-            string rol = cbxCambiarRol.SelectedItem?.ToString();
-            MessageBox.Show("Seleccionó: " + rol);
+            string? rol = cbxCambiarRol.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(rol)) return;
+            
+            if (rol == "[🛡️ Admin ]")
+            {
+                if(AppSetting.UsuarioPerfil.RolActual == null)
+                {
+                    MessageBox.Show("No puedes elegir el rol que tienes actualmente");
+                    return;
+                }
+                AppSetting.UsuarioPerfil.RolActual = null;
+                ActualizarRolLabel();
+                mainWindow.MostrarBotonesSegunPermisos();
+                return;
+            }
+
+
+            string? HayError = RolService.CambiarUsuarioRol(rol);
+            if (HayError != null)
+            {
+                MessageBox.Show(HayError + "Rol a intentar agregar:" + rol);
+                return;
+            }
+
+            ActualizarRolLabel();
+
+            mainWindow.MostrarBotonesSegunPermisos();
         }
     }
 }

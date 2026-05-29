@@ -3,6 +3,8 @@ using App.Domain.Entities;
 using App.Helpers;
 using App.Services.Database;
 using App.Services.ESDAD;
+using App.Services.PerfilUsuario;
+using App.Services.Roles;
 using System.IO.Packaging;
 using System.Reflection.Metadata;
 
@@ -37,6 +39,8 @@ namespace App.Services.auth
             }
 
             AppSetting.UsuarioPerfil.Correo = userEmail;
+            RolService.CargarRoles(userEmail);
+            ImagenService.ObtenerImagenPerfilUsuario(userEmail);
             return null;
         }
 
@@ -66,7 +70,7 @@ namespace App.Services.auth
 
 
         
-
+        
 
         public static string? Register(string userEmail, string password, string confirmPassword)
         {
@@ -112,13 +116,14 @@ namespace App.Services.auth
             ListaSimple<ParametrosSQL> sqlParam = new ListaSimple<ParametrosSQL>();
             sqlParam.InsertarCola(new ParametrosSQL("@UserName", "User"));
             sqlParam.InsertarCola(new ParametrosSQL("@UserMail", userEmail));
-            sqlParam.InsertarCola(new ParametrosSQL("@UserImage", ""));
+            sqlParam.InsertarCola(new ParametrosSQL("@UserImage", AppSetting.UsuarioPerfil.Image));
             sqlParam.InsertarCola(new ParametrosSQL("@UserPassword", passwordEncrypted));
 
             int response = DatabaseService.DatabaseAction(command, sqlParam);
 
             if (response > 0){
                 AppSetting.UsuarioPerfil.Correo = userEmail;
+                RolService.CargarRoles(userEmail);
                 return null;
             }
             else return "Error al registrar el usuario";

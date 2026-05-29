@@ -79,7 +79,7 @@
                     FontSize="11"
                     Foreground="#888888"
                     Margin="0,0,0,4"/>
-                
+
                 <Border 
                      CornerRadius="15" 
                      Grid.Row="4"
@@ -132,11 +132,11 @@
                         Text="Ej: 25.00"
                         GotFocus="TextBox_GotFocus"
                         LostFocus="TextBox_LostFocus"
-                        Margin="0,0,0,0"/> 
+                        Margin="0,0,0,0"/>
                 </Border>
-               
 
-                <Button 
+
+                <Button x:Name="btnAgregarProductos" 
                      Content="+ AGREGAR PLATO"
                      Click="BtnAgregar_Click"
                      Padding="0,16"
@@ -150,7 +150,7 @@
                      Template="{DynamicResource ButtonTwo}"
                      BorderThickness="0"
                      />
-                <Button 
+                <Button x:Name="btnEliminarProductos" 
                      Content="— ELIMINAR SELECCIONADO"
                      Click="BtnEliminar_Click"
                      Padding="0,14"
@@ -163,6 +163,19 @@
                      Grid.Row="8" 
                      BorderBrush="#E8440A"
                      Cursor="Hand"/>
+                <Button x:Name="btnEditarPRoducto" 
+                    Content="+ AGREGAR PLATO"
+                    Padding="0,16"
+                    FontSize="13"
+                    Height="40"
+                    Grid.Row="8" 
+                    FontWeight="Bold"
+                    Background="#E8440A"
+                    Foreground="White"
+                    Margin="0,55,0,-45"
+                    Template="{DynamicResource ButtonTwo}"
+                    BorderThickness="0"
+                     />
             </Grid>
 
             <Rectangle Grid.Column="1"
@@ -189,7 +202,7 @@
                       BorderBrush="#EEEEEE"
                       BorderThickness="1"                         
                       Padding="8">
-                        
+
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
                             <Setter Property="Padding" Value="16,12"/>

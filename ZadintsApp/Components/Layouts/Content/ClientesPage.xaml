@@ -9,6 +9,129 @@
       Title="Products">
 
     <Grid>
-        
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            Margin="20,59,381,10"
+            Effect="{DynamicResource ShadowStyle2}"
+            Padding="18">
+
+            <ListBox x:Name="lstClientes"
+                Background="#F9F9F9"
+                Margin="0,0,0,5"
+                BorderBrush="#EEEEEE"
+                BorderThickness="1"                         
+                Padding="8">
+
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Padding" Value="16,12"/>
+                        <Setter Property="Margin" Value="0,4"/>
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Foreground" Value="#222222"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#E8440A"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+
+        </Border>
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            Margin="661,59,24,10"
+            Effect="{DynamicResource ShadowStyle2}"
+            Padding="18">
+
+            <Grid>
+                <TextBlock
+            x:Name="lblProductosRestantesTitle" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="gray" 
+            FontSize="12" 
+            FontWeight="Light" 
+            IsEnabled="False" Margin="17,31,8,331" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform><Run Language="es-pe" Text="Los clientes se muestran en el panel izquierdo "/><LineBreak/><Run Language="es-pe" Text="conforme tu decidas la forma de orden de estos."/><LineBreak/><Run Language="es-pe"/><LineBreak/><Run Language="es-pe" Text="Los clientes se registran automáticamente cuando"/><LineBreak/><Run Language="es-pe" Text="vendes un producto en la opción 'Vender'."/></TextBlock>
+                <Label 
+            x:Name="lblTemeSetting_Copiar3" 
+            Content="Clientes" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="15" 
+            FontWeight="Bold" 
+            Height="40" 
+            Width="291" 
+            IsEnabled="False" HorizontalContentAlignment="Left" />
+                <GroupBox HorizontalAlignment="Center" Height="136" Header="Ordenar Clientes" Margin="0,121,0,0" VerticalAlignment="Top" Width="289" RenderTransformOrigin="0.533,0.451">
+
+                    <Grid>
+                        <RadioButton x:Name="rbOrdenarPorLetra" GroupName="OrdenClientes" Checked="Ordenar_Checked" Content="Por nombres (A-Z)" HorizontalAlignment="Left" Margin="19,17,0,0" VerticalAlignment="Top" Width="235"/>
+                        <RadioButton x:Name="rbOrdenarMayorEgresos" GroupName="OrdenClientes" Checked="Ordenar_Checked" Content="Por el mayor en Egresos" HorizontalAlignment="Left" Margin="19,45,0,0" VerticalAlignment="Top" Width="235"/>
+                        <RadioButton x:Name="rbOrdenarMayorComprador" GroupName="OrdenClientes" Checked="Ordenar_Checked" Content="Por el mayor comprador" HorizontalAlignment="Left" Margin="19,75,0,0" VerticalAlignment="Top" Width="235"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox HorizontalAlignment="Left" Height="171" Header="Buscar Cliente" Margin="10,274,0,0" VerticalAlignment="Top" Width="289" RenderTransformOrigin="0.533,0.451">
+
+                    <Grid>
+                        <Button x:Name="btnBuscarCliente" 
+            Content="Buscar"
+            Foreground="White"
+            Background="#EA6233"
+            Template="{DynamicResource ButtonTwo}"
+            FontSize="14.5"
+            FontWeight="SemiBold" Margin="154,96,10,16" Click="btnBuscarCliente_Click" />
+                        <Border Margin="10,43,10,74" BorderBrush="#E8440A" BorderThickness="0,0,0,2" CornerRadius="12" Background="White">
+                            <TextBox GotFocus="TextBox_GotFocus"                            
+LostFocus="TextBox_LostFocus" x:Name="tbxClienteABuscar"  Height="19"  TextWrapping="Wrap" Text="Nombre del cliente" Tag="Nombre del cliente" Foreground="Gray" VerticalAlignment="Center" Background ="Transparent" BorderThickness="0" Margin="8,0,8,0"/>
+                        </Border>
+                    </Grid>
+                </GroupBox>
+                <TextBlock
+                    x:Name="lblProductosRestantesTitle_Copiar" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="gray" 
+                    FontSize="12" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="27,320,82,109" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Text="Ingresa el nombre a buscar*">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+
+            </Grid>
+        </Border>
+        <Label 
+            x:Name="lblTitleGlobal" 
+            Content="Clientes " 
+            HorizontalAlignment="Left" 
+            Margin="23,0,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="25" 
+            FontWeight="Bold" Height="43" Width="131"/>
+
     </Grid>
 </Page>
